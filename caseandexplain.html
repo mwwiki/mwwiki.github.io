@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <button class="toggle-btn">☰</button>
+                <h2 class="menu-title">Menu</h2>
+            </div>
+            <h3 class="sidebar-header">Hướng Dẫn Cơ Bản</h3>
+            <ul class="sidebar-list">
+                <li><a href="scriptaccess.html">Cách Truy Cập Script</a></li>
+                <li><a href="editscript.html">Cách Chỉnh Sửa Kịch Bản</a></li>
+            </ul>
+            <h3 class="sidebar-header">Giới Thiệu</h3>
+            <ul class="sidebar-list">
+                <li><a href="lua.html">LUA là gì</a></li>
+                <li><a href="caseandexplain.html">Ví Dụ Cơ Bản Và Giải Thích</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <section id="home">
+                <h1>Ví Dụ Cơ Bản Và Giải Thích</h1>
+                <h8>Ví Dụ 1</h8>
+                    <li>Đặt 3 Khối Đá Phủ Rêu Tại 3 Vị Trí Có Tọa Độ Khác Nhau</li>
+                    <div class="code-block">
+                        <pre><code>
+<span class="api">Block:placeBlock</span><span class="api">(</span><span class="value">105</span><span class="api">,</span> <span class="value">3</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">3</span><span class="api">, FACE_DIRECTION.DIR_POS_Y</span><span class="api">)</span>
+<span class="api">Block:placeBlock</span><span class="api">(</span><span class="value">105</span><span class="api">,</span> <span class="value">5</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">5</span><span class="api">, FACE_DIRECTION.DIR_POS_Y</span><span class="api">)</span>
+<span class="api">Block:placeBlock</span><span class="api">(</span><span class="value">105</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">7</span><span class="api">, FACE_DIRECTION.DIR_POS_Y</span><span class="api">)</span>
+
+<span class="comment">-- Giải Thích Sơ Lược</span>
+<span class="comment">-- Khối:placeBlock(ID Khối ,Tọa Độ X, Tọa Độ Y, Tọa Độ Z, Hướng Đặt Khối) Đặt Khối Có ID Tại Điểm Có Tọa Độ X,Y,Z
+</span>
+</code></pre>
+                      </div>
+                <p>Giải Thích</p>
+                <ul>
+                    <li>Để Đặt Một Khối Chúng Ta Cần ID Của Khối Đó Và Để Lấy ID Của Khối Chúng Ta Vào <a href="blockid.html">ID Khối</a></li>
+                    <li>Để Đặt Một Khối Chúng Ta Sử Dụng <h7>Block:replaceBlock</h7></li>
+                    <li>Sau Đó Chúng Ta Cần Điền 5 Tham Số Vào <h7>Block:placeBlock</h7>. Bao Gồm:</li>
+                    <ul>
+                        <li>ID Khối</li>
+                        <li>Tọa Độ X</li>
+                        <li>Tọa Độ Y</li>
+                        <li>Tọa Độ Z</li>
+                        <li><a href="direction.html">Hướng Đặt Khối</a></li>
+                    </ul>
+                    <li>Sau Khi Đã Xác Định 5 Tham Số Thì Dùng <h7>Block:placeBlock</h7> Để Đặt Khối Ở 3 Vị Trí</li>
+                </ul>
+                <h9>Hoặc</h9>
+                <div class="code-block">
+                    <pre><code>
+<span class="keyword">local</span><span class="variable"> blockID </span><span class="api">= </span><span class="value">105</span><span class="comment">    -- Định Nghĩa Biến blockID Và Đặt Biến blockID Thành 105</span>
+<span class="keyword">local</span><span class="variable"> blockFace </span><span class="api">= </span><span class="api">FACE_DIRECTION.DIR_POS_Y</span><span class="comment">    -- Tương Tự Định Nghĩa Biến blockFace Và Đặt Biến Thành FACE_DIRECTION.DIR_POS_Y</span>
+<span class="api">Block:placeBlock</span><span class="api">(</span><span class="api">blockID</span><span class="api">,</span> <span class="value">3</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">3</span><span class="api">, blockFace</span><span class="api">)</span>
+<span class="api">Block:placeBlock</span><span class="api">(</span><span class="api">blockID</span><span class="api">,</span> <span class="value">5</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">5</span><span class="api">, blockFace</span><span class="api">)</span>
+<span class="api">Block:placeBlock</span><span class="api">(</span><span class="api">blockID</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">7</span><span class="api">, blockFace</span><span class="api">)</span>
+</span>
+                    </code></pre>
+                </div>
+            <p>Giải Thích</p>
+            <ul>
+                <li>3 Khối Được Đặt Là Giống Nhau Nên Chúng Ta Có Thể Sử Dụng 1 Biến Thay Vì ID</li>
+                <li>Một Biến Tương Đương Với 1 Cái Tên. Bạn Chỉ Cần Đặt Tên Cho Biến Rồi Đặt ID Của Khối Cho Chúng</li>
+                <li><x><span class="keyword">local</span><span class="variable"> blockID </span><span class="api">= </span><span class="value">105</span></x> Bước Này Dùng Để Đặt Giá Trị Vào Biến <x>blockID</x></li>
+                <li>Nếu Bạn Muốn Thay Đổi Khối Được Đặt Chỉ Cần Thay Đổi Giá Trị Của Biến <x>blockID = <span class="value">105</span></x></li>
+            </ul>
+            <h8>Ví Dụ 2</h8>
+            <li>Tạo 3 Bé Jockey Tại Tọa Độ Cho Trước</li>
+            <div class="code-block">
+            <pre><code>
+<span class="keyword">local </span><span class="variable"> actorID</span><span class="api"> = </span><span class="value">3102</span>      
+<span class="keyword">local </span><span class="variable"> num1, num2</span><span class="api"> = </span><span class="value">1</span><span class="api">,</span><span class="value"> 2</span>      
+<span class="keyword">local </span><span class="variable"> x, y, z</span><span class="api"> = </span><span class="value">5</span><span class="api">,</span><span class="value"> 7</span><span class="api">,</span><span class="value"> 5</span>         
+
+            </code></pre>
+            </div>
+            </section>
+        </div>
+    </div>
+    <script src="sidebar.js"></script>
+    <script src="copy.js"></script>
+</body>
+</html>

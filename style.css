@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    display: flex;
+    min-height: 100vh;
+    background-color: #181818; 
+    color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+.sidebar {
+    background: #282828;
+    color: #fff;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    overflow-y: auto;
+    padding: 2rem 1rem;
+    transition: width 0.3s ease;
+}
+
+@media (min-width: 768px) { 
+    .sidebar {
+        width: 250px;
+        transition: width 0.3s ease;
+        height: 100%; 
+    }
+
+    .sidebar.collapsed {
+        width: 50px; 
+        overflow-x: hidden; 
+    }
+
+    .content {
+        margin-left: 250px;
+        transition: margin-left 0.3s; 
+    }
+
+    .content.collapsed {
+        margin-left: 50px; 
+    }
+}
+
+/* Sidebar Styles for Mobile */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        width: 100%;
+        height: 100%; 
+        overflow: hidden; 
+        background: #282828;
+        transition: height 0.3s ease; 
+        z-index: 100; /* Add a z-index for visibility */
+    }
+
+    .sidebar.active {
+        height: 100%;
+        width: 100%; /* Make the sidebar full width when active */
+    }
+
+    .content {
+        padding-bottom: 50px; /* Tạo khoảng trống cho nút 3 sọc */
+    }
+
+    .toggle-btn { 
+        display: block; 
+    }
+
+    /* Collapse Styles for Smaller Screens */
+    .sidebar.collapsed {
+        width: 50px;
+        overflow-x: hidden;
+        height: 100%; 
+    }
+
+    .content.collapsed {
+        margin-left: 50px; 
+    }
+    .content.active {
+        margin-left: 100%; /* Move content to the right */
+        transition: margin-left 0.3s ease; 
+    }
+}
+/* Other Styles */
+
+.sidebar .toggle-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    overflow-x: visible;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.menu-title {
+    margin-left: 10px;
+    font-size: 1.5rem;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.collapsed .menu-title {
+    opacity: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 1rem;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    border-radius: 5px; /* Bo tròn góc cho link */
+    transition: background 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background: #383838; /* Màu nền khi hover */
+}
+
+.sidebar.collapsed .sidebar-list {
+    display: none; 
+}
+
+.content {
+    margin-left: 250px; 
+    padding: 2rem;
+    flex: 1;
+    transition: margin-left 0.3s;
+}
+
+.content h1, .content h2, .content h3 {
+    color: #f0f0f0; 
+    font-weight: 700; 
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+}
+.content.active h3 {
+    margin: 0;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #007bff;
+}
+.content.collapsed h3{
+    display: none;
+}
+.content p {
+    line-height: 1.8; 
+    color: #f0f0f0; 
+}
+
+.content pre {
+    background-color: #535050;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    position: relative; 
+}
+.content x {
+    background-color: #4d4d4d;
+    padding: 2px;
+    border-radius: 2px;
+}
+.content .comment {
+    color: #757575;
+    position: relative;
+}
+.content .keyword {
+    color: #007bff;
+    position: relative;
+}
+.content .string {
+    color: #00ff04;
+    position: relative;
+}
+.content .variable {
+    color: #fff;
+    position: relative; 
+}
+
+.content .value {
+    color: #007bff; 
+    position: relative; 
+}
+
+.content .function {
+    color: #ffffff; 
+    position: relative; 
+}
+.content .api {
+    color: #ffffff;
+    position: relative;
+}
+.code-block {
+    position: relative;
+}
+.code-block .copy-btn {
+    position: absolute;
+    top: 10px; 
+    right: 10px;
+    padding: 5px 10px;
+    background-color: #282828;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.sidebar.collapsed .sidebar-header:not(:first-child) {
+    display: none;
+}
+h7 {
+    font-weight: bold;
+    font-size: 18px;
+}
+h8 {
+    font-weight: 900;
+    font-size: 25px;
+}
+.content ul {
+    margin-left: 25px;
+}
+h9 {
+    font-weight: 800;
+    font-size: 23px;
+}
