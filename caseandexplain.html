@@ -37,9 +37,9 @@
 <span class="api">Block:placeBlock</span><span class="api">(</span><span class="value">105</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">7</span><span class="api">, FACE_DIRECTION.DIR_POS_Y</span><span class="api">)</span>
 
 <span class="comment">-- Giải Thích Sơ Lược</span>
-<span class="comment">-- Block:placeBlock(ID Khối ,Tọa Độ X, Tọa Độ Y, Tọa Độ Z, Hướng Đặt Khối) Đặt Khối có Id Tại Điểm có Tọa Độ X,Y,Z
+<span class="comment">-- Block:placeBlock(ID Khối ,Tọa Độ X, Tọa Độ Y, Tọa Độ Z, Hướng Đặt Khối) Đặt Khối có ID Tại Điểm có Tọa Độ X,Y,Z
 </span>
-</code></pre>
+                                                    </code></pre>
                       </div>
                 <p>Giải Thích</p>
                 <ul>
@@ -58,11 +58,11 @@
                 <h9>Hoặc</h9>
                 <div class="code-block">
                     <pre><code>
-<span class="keyword">local</span><span class="variable"> blockId </span><span class="api">= </span><span class="value">105</span><span class="comment">    -- Khai Báo Biến blockId Và Đặt Biến blockId Thành 105</span>
-<span class="keyword">local</span><span class="variable"> blockFace </span><span class="api">= </span><span class="api">Face_dIRecTION.dIR_POS_Y</span><span class="comment">    -- Tương Tự Định Nghĩa Biến blockFace Và Đặt Biến Thành Face_dIRecTION.dIR_POS_Y</span>
-<span class="api">Block:placeBlock</span><span class="api">(</span><span class="api">blockId</span><span class="api">,</span> <span class="value">3</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">3</span><span class="api">, blockFace</span><span class="api">)</span>
-<span class="api">Block:placeBlock</span><span class="api">(</span><span class="api">blockId</span><span class="api">,</span> <span class="value">5</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">5</span><span class="api">, blockFace</span><span class="api">)</span>
-<span class="api">Block:placeBlock</span><span class="api">(</span><span class="api">blockId</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">7</span><span class="api">, blockFace</span><span class="api">)</span>
+<span class="keyword">local</span><span class="variable"> blockID </span><span class="api">= </span><span class="value">105</span><span class="comment">    -- Khai Báo Biến blockID Và Đặt Biến blockID Thành 105</span>
+<span class="keyword">local</span><span class="variable"> blockFace </span><span class="api">= </span><span class="api">FACE_DIRECTION.DIR_POS_Y</span><span class="comment">    -- Tương Tự Định Nghĩa Biến blockFace Và Đặt Biến Thành FACE_DIRECTION.DIR_POS_Y</span>
+<span class="api">Block:placeBlock</span><span class="api">(</span><span class="api">blockID</span><span class="api">,</span> <span class="value">3</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">3</span><span class="api">, blockFace</span><span class="api">)</span>
+<span class="api">Block:placeBlock</span><span class="api">(</span><span class="api">blockID</span><span class="api">,</span> <span class="value">5</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">5</span><span class="api">, blockFace</span><span class="api">)</span>
+<span class="api">Block:placeBlock</span><span class="api">(</span><span class="api">blockID</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">7</span><span class="api">, blockFace</span><span class="api">)</span>
 </span>
                     </code></pre>
                 </div>
@@ -70,18 +70,47 @@
             <ul>
                 <li>3 khối được đặt là giống nhau nên chúng ta có thể sử dụng 1 biến thay vì nhập ID khối nhiều lần.</li>
                 <li>Một biến tương đương với 1 cái tên. Bạn chỉ cần đặt tên cho biến rồi đặt ID của khối cho chúng.</li>
-                <li><x><span class="keyword">local</span><span class="variable"> blockId </span><span class="api">= </span><span class="value">105</span></x> Bước Này dùng Để Đặt Giá Trị Vào Biến <x>blockId</x></li>
-                <li>Nếu bạn muốn thay đổi khối được đặt chỉ cần thay đổi giá trị của biến <x>blockId = <span class="value">105</span></x></li>
+                <li><x><span class="keyword">local</span><span class="variable"> blockID </span><span class="api">= </span><span class="value">105</span></x> Bước Này dùng Để Đặt Giá Trị Vào Biến <x>blockID</x></li>
+                <li>Nếu bạn muốn thay đổi khối được đặt chỉ cần thay đổi giá trị của biến <x>blockID = <span class="value">105</span></x></li>
             </ul>
             <h8>Ví dụ 2</h8>
             <li>Tạo 3 Bé Jockey tại tọa độ cho trước</li>
             <div class="code-block">
             <pre><code>
-<span class="keyword">local </span><span class="variable"> actorId</span><span class="api"> = </span><span class="value">3102</span><span class="comment">   -- Khai Báo Biến actorId Và Đặt</span>      
-<span class="keyword">local </span><span class="variable"> num1, num2</span><span class="api"> = </span><span class="value">1</span><span class="api">,</span><span class="value"> 2</span>      
-<span class="keyword">local </span><span class="variable"> x, y, z</span><span class="api"> = </span><span class="value">5</span><span class="api">,</span><span class="value"> 7</span><span class="api">,</span><span class="value"> 5</span>         
+<span class="keyword">local </span><span class="variable"> actorID</span><span class="api"> = </span><span class="value">3102</span><span class="comment">   -- Khai Báo Biến actorID Và Đặt Biến Thành 3102</span>      
+<span class="keyword">local </span><span class="variable"> num1, num2</span><span class="api"> = </span><span class="value">1</span><span class="api">,</span><span class="value"> 2</span><span class="comment">   -- Khai Báo 2 Biến num1, num2 Và Lần Lượt Đặt Biến Thành 1, 2</span>      
+<span class="keyword">local </span><span class="variable"> x, y, z</span><span class="api"> = </span><span class="value">5</span><span class="api">,</span><span class="value"> 7</span><span class="api">,</span><span class="value"> 5</span><span class="comment">   -- Khai Báo 3 Biến Và Lần Lượt Đặt Tọa Độ Tương Ứng Vào 3 Biến</span>         
+<span class="api">World:spawnCreature(x, y, z, actorId, num1 + num2)</span>
 
+<span class="comment">-- Giải Thích Sơ Lược</span>
+<span class="comment">World:spawnCreature(Tọa Độ X, Tọa Độ Y, Tọa Độ Z, ID Sinh Vật, Số Lượng Sinh Vật Tạo Ra) Tạo Ra Số Lượng Sinh Vật Có ID Là ID 
+Sinh Vật Tại Vị Trí Có Tọa Độ X, Y ,Z</span>
             </code></pre>
+            <p>Giải Thích</p>
+            <ul>
+                <li>3 dòng đầu tiên khái báo các biến. Các bước khai báo biến tương tự như nhau</li>
+                <li>Ngoài ra Script cũng hỗ trợ các toán tử như + - * / .Các biến cũng có thể sử dụng các toán tử đó</li>
+                <li>Tạo ra sinh vật bằng <x><span class="api">World:spawnCreature</span></x> </li>
+            </ul>
+            </div>
+            <h8>Ví dụ 2</h8>
+            <li>Tạo ngẫu nhiên từ 1 đến 10 Bé Jockey tại tọa độ cho trước và tạo tin nhắn số lượng Bé Jockey tạo ra</li>
+            <div class="code-block">
+            <pre><code>
+<span class="keyword">local </span><span class="variable"> actorID</span><span class="api"> = </span><span class="value">3102</span><span class="comment">   -- Khai Báo Biến actorID Và Đặt Biến Thành 3102</span>      
+<span class="keyword">local </span><span class="variable"> num</span><span class="api"> = </span><span class="math">math</span><span class="api">.random(</span><span class="value">1</span><span class="api">,</span><span class="value"> 10</span><span class="api">)</span><span class="comment">   -- Khai Báo Biến num Và Đặt Biến Thành Giá Trị Ngẫu Nhiên Từ 1 Đến 10</span>      
+<span class="keyword">local </span><span class="variable"> x, y, z</span><span class="api"> = </span><span class="value">5</span><span class="api">,</span><span class="value"> 7</span><span class="api">,</span><span class="value"> 5</span><span class="comment">   -- Khai Báo 3 Biến Và Lần Lượt Đặt Tọa Độ Tương Ứng Vào 3 Biến</span>         
+<span class="api">World:spawnCreature(x, y, z, actorId, num)</span>
+<span class="api">Chat:sendSystemMsg(</span><span class="string">"Số Lượng Bé Jockey Tạo Ra Là:"..</span>num)</span>
+<span class="comment">-- Giải Thích Sơ Lược</span>
+<span class="comment">Chat:sendSystemMsg(Nội Dung Muốn Hiển Thị)</span>
+            </code></pre>
+            <p>Giải Thích</p>
+            <ul>
+                <li>3 dòng đầu tiên khái báo các biến. Các bước khai báo biến tương tự như nhau</li>
+                <li>Ngoài ra Script cũng hỗ trợ các toán tử như + - * / .Các biến cũng có thể sử dụng các toán tử đó</li>
+                <li>Tạo ra sinh vật bằng <x><span class="api">World:spawnCreature</span></x> </li>
+            </ul>
             </div>
             </section>
         </div>

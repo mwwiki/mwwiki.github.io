@@ -173,11 +173,12 @@ body {
 }
 
 .content pre {
-    background-color: #535050;
+    background-color: #313131;
     padding: 10px;
     border-radius: 5px;
     overflow-x: auto;
     position: relative; 
+    width: 100%;
 }
 .content x {
     background-color: #4d4d4d;
@@ -189,11 +190,15 @@ body {
     position: relative;
 }
 .content .keyword {
-    color: #007bff;
+    color: #238dff;
     position: relative;
 }
 .content .string {
     color: #00ff04;
+    position: relative;
+}
+.content .math {
+    color: #83ff85;
     position: relative;
 }
 .content .variable {
@@ -202,7 +207,7 @@ body {
 }
 
 .content .value {
-    color: #007bff; 
+    color: #238dff; 
     position: relative; 
 }
 
@@ -215,6 +220,7 @@ body {
     position: relative;
 }
 .code-block {
+    width: 100%;
     position: relative;
 }
 .code-block .copy-btn {
@@ -222,7 +228,7 @@ body {
     top: 10px; 
     right: 10px;
     padding: 5px 10px;
-    background-color: #282828;
+    background-color: #313313;
     color: #f0f0f0;
     border: none;
     border-radius: 5px;
