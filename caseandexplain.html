@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!dOcTYPe html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,15 +21,15 @@
             </ul>
             <h3 class="sidebar-header">Giới Thiệu</h3>
             <ul class="sidebar-list">
-                <li><a href="lua.html">LUA là gì</a></li>
+                <li><a href="lua.html">LUA Là Gì</a></li>
                 <li><a href="caseandexplain.html">Những Ví Dụ Cơ Bản Và Giải Thích</a></li>
             </ul>
         </nav>
         <div class="content">
             <section id="home">
                 <h1>Ví Dụ Cơ Bản Và Giải Thích</h1>
-                <h8>Ví Dụ 1</h8>
-                    <li>Đặt 3 Khối Đá Phủ Rêu Tại 3 Vị Trí Có Tọa Độ Khác Nhau</li>
+                <h8>Ví dụ 1</h8>
+                    <li>Đặt 3 khối đá phủ rêu tại 3 vị trí có tọa độ khác nhau</li>
                     <div class="code-block">
                         <pre><code>
 <span class="api">Block:placeBlock</span><span class="api">(</span><span class="value">105</span><span class="api">,</span> <span class="value">3</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">3</span><span class="api">, FACE_DIRECTION.DIR_POS_Y</span><span class="api">)</span>
@@ -37,15 +37,15 @@
 <span class="api">Block:placeBlock</span><span class="api">(</span><span class="value">105</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">7</span><span class="api">, FACE_DIRECTION.DIR_POS_Y</span><span class="api">)</span>
 
 <span class="comment">-- Giải Thích Sơ Lược</span>
-<span class="comment">-- Khối:placeBlock(ID Khối ,Tọa Độ X, Tọa Độ Y, Tọa Độ Z, Hướng Đặt Khối) Đặt Khối Có ID Tại Điểm Có Tọa Độ X,Y,Z
+<span class="comment">-- Block:placeBlock(ID Khối ,Tọa Độ X, Tọa Độ Y, Tọa Độ Z, Hướng Đặt Khối) Đặt Khối có Id Tại Điểm có Tọa Độ X,Y,Z
 </span>
 </code></pre>
                       </div>
                 <p>Giải Thích</p>
                 <ul>
-                    <li>Để Đặt Một Khối Chúng Ta Cần ID Của Khối Đó Và Để Lấy ID Của Khối Chúng Ta Vào <a href="blockid.html">ID Khối</a></li>
-                    <li>Để Đặt Một Khối Chúng Ta Sử Dụng <h7>Block:replaceBlock</h7></li>
-                    <li>Sau Đó Chúng Ta Cần Điền 5 Tham Số Vào <h7>Block:placeBlock</h7>. Bao Gồm:</li>
+                    <li>Để đặt một khối chúng ta cần ID của khối đó. Để lấy ID của khối chúng ta vào <a href="blockid.html">ID Khối</a></li>
+                    <li>Để đặt một khối chúng ta sử dụng <h7>Block:placeBlock</h7></li>
+                    <li>Sau đó chúng ta điền 5 tham số vào <h7>Block:placeBlock</h7>. Bao Gồm:</li>
                     <ul>
                         <li>ID Khối</li>
                         <li>Tọa Độ X</li>
@@ -53,31 +53,31 @@
                         <li>Tọa Độ Z</li>
                         <li><a href="direction.html">Hướng Đặt Khối</a></li>
                     </ul>
-                    <li>Sau Khi Đã Xác Định 5 Tham Số Thì Dùng <h7>Block:placeBlock</h7> Để Đặt Khối Ở 3 Vị Trí</li>
+                    <li>Sau khi đã xác định 5 tham số thì dùng <h7>Block:placeBlock</h7> để đặt khối ở 3 vị trí</li>
                 </ul>
                 <h9>Hoặc</h9>
                 <div class="code-block">
                     <pre><code>
-<span class="keyword">local</span><span class="variable"> blockID </span><span class="api">= </span><span class="value">105</span><span class="comment">    -- Định Nghĩa Biến blockID Và Đặt Biến blockID Thành 105</span>
-<span class="keyword">local</span><span class="variable"> blockFace </span><span class="api">= </span><span class="api">FACE_DIRECTION.DIR_POS_Y</span><span class="comment">    -- Tương Tự Định Nghĩa Biến blockFace Và Đặt Biến Thành FACE_DIRECTION.DIR_POS_Y</span>
-<span class="api">Block:placeBlock</span><span class="api">(</span><span class="api">blockID</span><span class="api">,</span> <span class="value">3</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">3</span><span class="api">, blockFace</span><span class="api">)</span>
-<span class="api">Block:placeBlock</span><span class="api">(</span><span class="api">blockID</span><span class="api">,</span> <span class="value">5</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">5</span><span class="api">, blockFace</span><span class="api">)</span>
-<span class="api">Block:placeBlock</span><span class="api">(</span><span class="api">blockID</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">7</span><span class="api">, blockFace</span><span class="api">)</span>
+<span class="keyword">local</span><span class="variable"> blockId </span><span class="api">= </span><span class="value">105</span><span class="comment">    -- Khai Báo Biến blockId Và Đặt Biến blockId Thành 105</span>
+<span class="keyword">local</span><span class="variable"> blockFace </span><span class="api">= </span><span class="api">Face_dIRecTION.dIR_POS_Y</span><span class="comment">    -- Tương Tự Định Nghĩa Biến blockFace Và Đặt Biến Thành Face_dIRecTION.dIR_POS_Y</span>
+<span class="api">Block:placeBlock</span><span class="api">(</span><span class="api">blockId</span><span class="api">,</span> <span class="value">3</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">3</span><span class="api">, blockFace</span><span class="api">)</span>
+<span class="api">Block:placeBlock</span><span class="api">(</span><span class="api">blockId</span><span class="api">,</span> <span class="value">5</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">5</span><span class="api">, blockFace</span><span class="api">)</span>
+<span class="api">Block:placeBlock</span><span class="api">(</span><span class="api">blockId</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">7</span><span class="api">, blockFace</span><span class="api">)</span>
 </span>
                     </code></pre>
                 </div>
             <p>Giải Thích</p>
             <ul>
-                <li>3 Khối Được Đặt Là Giống Nhau Nên Chúng Ta Có Thể Sử Dụng 1 Biến Thay Vì ID</li>
-                <li>Một Biến Tương Đương Với 1 Cái Tên. Bạn Chỉ Cần Đặt Tên Cho Biến Rồi Đặt ID Của Khối Cho Chúng</li>
-                <li><x><span class="keyword">local</span><span class="variable"> blockID </span><span class="api">= </span><span class="value">105</span></x> Bước Này Dùng Để Đặt Giá Trị Vào Biến <x>blockID</x></li>
-                <li>Nếu Bạn Muốn Thay Đổi Khối Được Đặt Chỉ Cần Thay Đổi Giá Trị Của Biến <x>blockID = <span class="value">105</span></x></li>
+                <li>3 khối được đặt là giống nhau nên chúng ta có thể sử dụng 1 biến thay vì nhập ID khối nhiều lần.</li>
+                <li>Một biến tương đương với 1 cái tên. Bạn chỉ cần đặt tên cho biến rồi đặt ID của khối cho chúng.</li>
+                <li><x><span class="keyword">local</span><span class="variable"> blockId </span><span class="api">= </span><span class="value">105</span></x> Bước Này dùng Để Đặt Giá Trị Vào Biến <x>blockId</x></li>
+                <li>Nếu bạn muốn thay đổi khối được đặt chỉ cần thay đổi giá trị của biến <x>blockId = <span class="value">105</span></x></li>
             </ul>
-            <h8>Ví Dụ 2</h8>
-            <li>Tạo 3 Bé Jockey Tại Tọa Độ Cho Trước</li>
+            <h8>Ví dụ 2</h8>
+            <li>Tạo 3 Bé Jockey tại tọa độ cho trước</li>
             <div class="code-block">
             <pre><code>
-<span class="keyword">local </span><span class="variable"> actorID</span><span class="api"> = </span><span class="value">3102</span>      
+<span class="keyword">local </span><span class="variable"> actorId</span><span class="api"> = </span><span class="value">3102</span><span class="comment">   -- Khai Báo Biến actorId Và Đặt</span>      
 <span class="keyword">local </span><span class="variable"> num1, num2</span><span class="api"> = </span><span class="value">1</span><span class="api">,</span><span class="value"> 2</span>      
 <span class="keyword">local </span><span class="variable"> x, y, z</span><span class="api"> = </span><span class="value">5</span><span class="api">,</span><span class="value"> 7</span><span class="api">,</span><span class="value"> 5</span>         
 
