@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <button class="toggle-btn">☰</button>
+                <h2 class="menu-title">Menu</h2>
+            </div>
+            <h3 class="sidebar-header">Hướng Dẫn Cơ Bản</h3>
+            <ul class="sidebar-list">
+                <li><a href="scriptaccess.html">Cách Truy Cập Script</a></li>
+                <li><a href="editscript.html">Cách Chỉnh Sửa Kịch Bản</a></li>
+            </ul>
+            <h3 class="sidebar-header">Giới Thiệu</h3>
+            <ul class="sidebar-list">
+                <li><a href="lua.html">LUA Là Gì</a></li>
+                <li><a href="caseandexplain.html">Ví Dụ Cơ Bản Và Giải Thích</a></li>
+                <li><a href="luacase.html">Ví Dụ Về Các Chức Năng Của LUA</a></li>
+            </ul>
+            <h3 class="sidebar-header">Script</h3>
+            <ul class="sidebar-list">
+                <li><a href="scriptwork.html">Script Hoạt Động Như Thế Nào</a></li>
+                <li><a href="mwapi.html">Mini World API</a></li>
+                <ul>
+                    <li class="sidebar-small-list"><a href="event.html">Sự Kiện</a></li>
+                </ul>
+            </ul>
+        </nav>
+        <div class="content">
+            <section id="home">
+                <h1>Script Hoạt Động Như Thế Nào</h1>
+                <ul>
+                    <li><div>Script phát triển dựa trên ngôn ngữ Lua, được tích hợp với Mini World và cung cấp một ngôn ngữ kịch bản với nhiều API và chức năng. Sử dụng script, bạn có thể phát triển rất nhiều cơ chế thú vị.</div></li>
+                    <li><div>Để chạy 1 script chúng ta cần sử dụng <x>event</x>. Tìm hiểu thêm về <x>event</x> tại đây <a href="event.html">Sự Kiện</a></div></li>
+                    <li><div>Script dành cho nhà phát triển cung cấp một số đối tượng chung cho người chơi theo mặc định. Đối tượng chung tương ứng với sự kiện là <x>ScriptSupportEvent</x>. Đối với các đối tượng toàn cầu khác, vui lòng tham khảo <a href="mwapi.html">Mini World API</a></div></li>
+                    <li><div>Người chơi cần phải thêm các sự kiện bằng tay, ví dụ như sự kiện <x>Game.Start</x> sẽ được thực thi khi trò chơi bắt đầu. Để biết thông tin chi tiết về các loại sự kiện và tham số trả về, vui lòng tham khảo <a href="event.html">Sự Kiện</a>.</div></li>
+                    <li><div>Ví Dụ:</div></li>
+                    <ul>
+                        <li><div>Khi trò chơi được bắt đầu, <x><span class="math">Game.Start</span></x> được kích hoạt:</div></li>
+<div class="code-block">
+<pre><code><span>ScriptSupportEvent:registerEvent(<span class="math">[=[Game.Start]=]</span>, Game_StartGame)</span></code></pre>
+</div>
+                        <li><div>Khi người chơi bất kì vào phòng, <x><span class="math">Player.Init</span></x> được kích hoạt:</div></li>
+<div class="code-block">
+<pre><code><span>ScriptSupportEvent:registerEvent(<span class="math">[=[Player.Init]=]</span>, Player_Init)</span></code></pre>
+</div>
+                        <li><div>Trò chơi kích hoạt sự kiện <x><span class="math">Game.Run</span></x> mỗi 0.05 giây:</div></li>
+<div class="code-block">
+<pre><code><span>ScriptSupportEvent:registerEvent(<span class="math">[=[Game.Run]=]</span>, Game_Run)</span></code></pre>
+</div>
+
+                        <li><div>Khi trò chơi kết thúc, <x><span class="math">Game.End</span></x> được kích hoạt. Bạn cũng có thể gọi nó bằng <x><span class="math">Game:doGameEnd()</span></x>:</div></li>
+<div class="code-block">
+<pre><code><span>ScriptSupportEvent:registerEvent(<span class="math">[=[Game.End]=]</span>, Game_End)</span></code></pre>
+</div>
+                        <li><div>Khi kết thúc thời gian chơi, <x><span class="math">Game.TimeOver</span></x> được kích hoạt.</div></li>
+<div class="code-block">
+<pre><code><span>ScriptSupportEvent:registerEvent(<span class="math">[=[Game.TimeOver]=]</span>, Game_TimeOver)</span></code></pre>
+</div>
+                        <li><div>Nhiều sự kiện khác được liệt kê tại <a href="event.html">Sự Kiện</a></div></li>
+                    </ul>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <script src="sidebar.js"></script>
+    <script src="copy.js"></script>
+</body>
+</html>
