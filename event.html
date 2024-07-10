@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <button class="toggle-btn">☰</button>
+                <h2 class="menu-title">Menu</h2>
+            </div>
+            <h3 class="sidebar-header">Hướng Dẫn Cơ Bản</h3>
+            <ul class="sidebar-list">
+                <li><a href="scriptaccess.html">Cách Truy Cập Script</a></li>
+                <li><a href="editscript.html">Cách Chỉnh Sửa Kịch Bản</a></li>
+            </ul>
+            <h3 class="sidebar-header">Giới Thiệu</h3>
+            <ul class="sidebar-list">
+                <li><a href="lua.html">LUA Là Gì</a></li>
+                <li><a href="caseandexplain.html">Ví Dụ Cơ Bản Và Giải Thích</a></li>
+                <li><a href="luacase.html">Ví Dụ Về Các Chức Năng Của LUA</a></li>
+            </ul>
+            <h3 class="sidebar-header">Script</h3>
+            <ul class="sidebar-list">
+                <li><a href="scriptwork.html">Script Hoạt Động Như Thế Nào</a></li>
+                <li><a href="mwapi.html">Mini World API</a></li>
+                <ul>
+                    <li class="sidebar-small-list"><a href="event.html">Sự Kiện</a></li>
+                    <li class="sidebar-small-list"><a href="gamerule.html">Quy Luật Thế Giới</a></li>
+                    <li class="sidebar-small-list"><a href="world.html">Quản Lí Thế Giới</a></li>
+                    <li class="sidebar-small-list"><a href="game.html">Quản Lí Trò Chơi</a></li>
+                    <li class="sidebar-small-list"><a href="block.html">Quản Lí Khối</a></li>
+                    <li class="sidebar-small-list"><a href="buff.html">Quản Lí Trạng Thái</a></li>
+                    <li class="sidebar-small-list"><a href="actor.html">Quản Lí Thực Thể/Actor Management Interface(Cần Góp Ý Dịch)</a></li>
+                    <li class="sidebar-small-list"><a href="player.html">Quản Lí Người Chơi</a></li>
+                    <li class="sidebar-small-list"><a href="creature.html">Quản Lí Sinh Vật</a></li>
+                    <li class="sidebar-small-list"><a href="ui.html">Quản Lí Giao Diện UI</a></li>
+                    <li class="sidebar-small-list"><a href="area.html">Quản Lí Khu Vực</a></li>
+                    <li class="sidebar-small-list"><a href="chat.html">Quản Lí Chat</a></li>
+                    <li class="sidebar-small-list"><a href="team.html">Quản Lí Đội</a></li>
+                    <li class="sidebar-small-list"><a href="item.html">Quản Lí Vật Phẩm</a></li>
+                    <li class="sidebar-small-list"><a href="backpack.html">Quản Lí Túi Đồ</a></li>
+                    <li class="sidebar-small-list"><a href="objectlib.html">Quản Lí Đối Tượng</a></li>
+                    <li class="sidebar-small-list"><a href="varlib2.html">Quản Lí Biến</a></li>
+                    <li class="sidebar-small-list"><a href="worldcontainer.html">Quản Lí Vật Chứa/Container Management Interface(Cần Góp Ý Dịch)</a></li>
+                    <li class="sidebar-small-list"><a href="mapmark.html">Quản Lí Đánh Dấu Thế Giới/Minimap Management Interface(Cần Góp Ý Dịch)(Không Hoạt Động)</a></li>
+                    <li class="sidebar-small-list"><a href="spawnport.html">Quản Lí Điểm Hồi Sinh</a></li>
+                    <li class="sidebar-small-list"><a href="timer.html">Quản Lí Bộ Đếm Giờ</a></li>
+                    <li class="sidebar-small-list"><a href="graphic.html">Quản Lí Đồ Họa/Graphics and text information management interface(Không Hoạt Động)</a></li>
+                    <li class="sidebar-small-list"><a href="listenparam.html">Function monitoring management interface</a></li>
+                    <li class="sidebar-small-list"><a href="valuegroup.html">Quản Lí Nhóm Biến</a></li>
+                    <li class="sidebar-small-list"><a href="costomui.html">Quản Lí UI</a></li>
+                    <li class="sidebar-small-list"><a href="displayboard.html">Quản Lí Bảng Hiện Thị</a></li>
+                    <li class="sidebar-small-list"><a href="cloudsever.html">Quản Lí Máy Chủ Đám Mây</a></li>
+                </ul>
+            </ul>
+        </nav>
+        <div class="content">
+            <section id="home">
+                <h1>Sự Kiện</h1>
+                <div>Bạn có thể thêm sự kiện như các ví dụ sau:</div>
+                <div class="code-block">
+<pre><code><span><span class="comment">-- Sự Kiện Của Game</span>
+ScriptSupportEvent:registerEvent(<span class="math">[=[Game.Start]=]</span>, Game_StartGame)
+ScriptSupportEvent:registerEvent(<span class="math">[=[Game.Run]=]</span>, Game_Update)
+ScriptSupportEvent:registerEvent(<span class="math">[=[Game.End]=]</span>, Game_GameOver)
+<span class="comment">-- Sự Kiện Của Người Chơi</span>
+ScriptSupportEvent:registerEvent(<span class="math">[=[Player.Die]=]</span>, Player_Dead)
+ScriptSupportEvent:registerEvent(<span class="math">[=[Player.Revive]=]</span>, Player_Revive)
+ScriptSupportEvent:registerEvent(<span class="math">[=[Player.AddItem]=]</span>, BackPack_AddItem)
+<span class="comment">-- Sự Kiện Của Block</span>
+ScriptSupportEvent:registerEvent(<span class="math">[=[Block.Add]=]</span>, Block_Add)
+ScriptSupportEvent:registerEvent(<span class="math">[=[Block.DestroyBy]=]</span>, Block_Destroy)
+ScriptSupportEvent:registerEvent(<span class="math">[=[Block.Trigger]=]</span>, Block_Trigger)</span>
+</code></pre>
+            </div>
+            </section>
+            <section id="event-type">
+                <h1>Các loại sự kiện:</h1>
+                <table>
+                    <tr>
+                        <th>Số Thứ Tự</th>
+                        <th>Loại Sự Kiện</th>
+                        <th>Mô Tả</th>
+                    </tr>
+                    <tr>
+                        <th class="th1">1</th>
+                        <th><a href="event.html#game">Sự Kiện Game</a></th>
+                        <th>Sự Kiện Liên Quan Đến Game</th>
+                    </tr>
+                    <tr>
+                        <th class="th1">2</th>
+                        <th><a href="event.html#logic">Sự Kiện Logic Của Game</a></th>
+                        <th>Sự Kiện Liên Quan Đến Logic Game</th>
+                    </tr>
+                    <tr>
+                        <th class="th1">3</th>
+                        <th><a href="event.html#player">Sự Kiện Người Chơi</a></th>
+                        <th>Sự Kiện Liên Quan Đến Người Chơi</th>
+                    </tr>
+                    <tr>
+                        <th class="th1">4</th>
+                        <th><a href="event.html#">Sự Kiện Sinh Vật</a></th>
+                        <th>Sự Kiện Liên Quan Đến Sinh Vật Không Phải Người Chơi</th>
+                    </tr>
+                    <tr>
+                        <th class="th1">5</th>
+                        <th><a href="event.html#">Sự Kiện Khối</a></th>
+                        <th>Sự Kiện Liên Quan Đến Khối</th>
+                    </tr>
+                    <tr>
+                        <th class="th1">6</th>
+                        <th><a href="event.html#">Sự Kiện Vật Phẩm</a></th>
+                        <th>Sự Kiện Liên Quan Đến Vật Phẩm</th>
+                    </tr>
+                    <tr>
+                        <th class="th1">7</th>
+                        <th><a href="event.html#">Sự Kiện Hiệu Ứng Đặc Biệt</a></th>
+                        <th>Sự Kiện Liên Quan Đến Hiệu Ứng Đặc Biệt</th>
+                    </tr>
+                    <tr>
+                        <th class="th1">8</th>
+                        <th><a href="event.html#">Sự Kiện UI</a></th>
+                        <th>Sự Kiên Liên Quan Đến UI</th>
+                    </tr>
+                    <tr>
+                        <th class="th1">9</th>
+                        <th><a href="event.html#">Các Sự Kiện Khác</a></th>
+                        <th>Các Sự Kiện Khác</th>
+                    </tr>
+                </table>
+            </section>            
+            <section id="game">
+                <h1>Sự Kiện Game:</h1>
+                <table>
+                    <tr>
+                        <th>Tên</th>
+                        <th>Cách Dùng</th>
+                        <th>Tham Số</th>
+                        <th>Mô Tả Tham Số(Sẽ Update)</th>
+                    </tr>
+                    <tr>
+                        <th>
+<div class="code-block"><pre><code>Backpack.ItemChange        </code></pre></div></th>
+                        <th>Bất kỳ vật phẩm nào thay đổi trong bất kỳ loại balo</th>
+                        <th>blockid<br>
+                            itemid<br>
+                            itemnum<br>
+                            x,y,z</th>
+                        <th>block type<br>
+                            prop type<br>
+                            prop quantity<br>
+                            block coordinates</th>
+                    </tr>
+                    <tr>
+                        <th><div class="code-block"><pre><code>Backpack.ItemPutIn</code></pre></div></th>
+                        <th>Bất kỳ vật phẩm nào được thêm vào trong bất kỳ loại balo</th>
+                        <th>blockid<br>
+                            itemid<br>
+                            itemnum<br>
+                            x,y,z</th>
+                        <th>block type<br>
+                            prop type<br>
+                            prop quantity<br>
+                            block coordinates</th>
+                    </tr>
+                    <tr>
+                        <th><div class="code-block"><pre><code>Backpack.ItemTakeOut</code></pre></div></th>
+                        <th>Bất kỳ vật phẩm nào được lấy ra trong bất kỳ loại balo</th>
+                        <th>blockid<br>
+                            itemid<br>
+                            itemnum<br>
+                            x,y,z</th>
+                        <th>block type<br>
+                            prop type<br>
+                            prop quantity<br>
+                            block coordinates</th>
+                    </tr>
+                </table>
+            </section>
+            <section id="logic">
+                <h1>Sự Kiện Logic Của Game</h1>
+                <table>
+                    <tr>
+                        <th>Tên</th>
+                        <th>Cách Dùng</th>
+                        <th>Tham Số</th>
+                        <th>Mô Tả Tham Số(Sẽ Update)</th>
+                    </tr>
+                    <tr>
+                        <th><div class="code-block"><pre><code>Game.Hour</code></pre></div></th>
+                        <th>Khi giờ trò chơi thay đổi</th>
+                        <th>hours</th>
+                        <th>Game Hours</th>
+                    </tr>
+                    <tr>
+                        <th><div class="code-block"><pre><code>Game.RunTime        </code></pre></div</th>
+                        <th>Khi trò chơi đang chạy (Mỗi 0.05 giây)</th>
+                        <th>second, ticks</th>
+                        <th>Game Minutes, Game Seconds</th>
+                    </tr>
+                </table>
+            </section>
+        </div>
+    </div>
+    <script src="sidebar.js"></script>
+    <script src="copy.js"></script>
+    <script src="section.js"></script>
+</body>
+</html>

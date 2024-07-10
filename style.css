@@ -261,3 +261,14 @@ a{
     font-weight: bold;
     text-decoration: none;
 }
+table,th,td{
+    border: 1px solid #fff261;
+    border-collapse: collapse
+}
+th,td{
+    padding: 10px;
+    text-align: left;
+}
+.th1{
+    text-align: center;
+}

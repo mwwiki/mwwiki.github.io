@@ -1,18 +1,18 @@
-document.addEventListener("scroll", () => {
-    const sections = document.querySelectorAll("section");
-    let currentSectionId = "";
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('section');
 
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-
-        if (window.scrollY >= sectionTop - sectionHeight / 2 &&
-            window.scrollY < sectionTop + sectionHeight / 2) {
-            currentSectionId = section.id;
-        }
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.id;
+                history.pushState(null, '', `#${id}`);
+            }
+        });
+    }, {
+        threshold: 0.5 // Adjust this threshold as needed
     });
 
-    if (currentSectionId) {
-        history.replaceState(null, null, `#${currentSectionId}`);
-    }
+    sections.forEach(section => {
+        observer.observe(section);
+    });
 });
