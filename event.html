@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <nav class="sidebar">
@@ -36,7 +38,8 @@
                     <li class="sidebar-small-list"><a href="game.html">Quản Lí Trò Chơi</a></li>
                     <li class="sidebar-small-list"><a href="block.html">Quản Lí Khối</a></li>
                     <li class="sidebar-small-list"><a href="buff.html">Quản Lí Trạng Thái</a></li>
-                    <li class="sidebar-small-list"><a href="actor.html">Quản Lí Thực Thể/Actor Management Interface(Cần Góp Ý Dịch)</a></li>
+                    <li class="sidebar-small-list"><a href="actor.html">Quản Lí Thực Thể/Actor Management Interface(Cần
+                            Góp Ý Dịch)</a></li>
                     <li class="sidebar-small-list"><a href="player.html">Quản Lí Người Chơi</a></li>
                     <li class="sidebar-small-list"><a href="creature.html">Quản Lí Sinh Vật</a></li>
                     <li class="sidebar-small-list"><a href="ui.html">Quản Lí Giao Diện UI</a></li>
@@ -47,12 +50,16 @@
                     <li class="sidebar-small-list"><a href="backpack.html">Quản Lí Túi Đồ</a></li>
                     <li class="sidebar-small-list"><a href="objectlib.html">Quản Lí Đối Tượng</a></li>
                     <li class="sidebar-small-list"><a href="varlib2.html">Quản Lí Biến</a></li>
-                    <li class="sidebar-small-list"><a href="worldcontainer.html">Quản Lí Vật Chứa/Container Management Interface(Cần Góp Ý Dịch)</a></li>
-                    <li class="sidebar-small-list"><a href="mapmark.html">Quản Lí Đánh Dấu Thế Giới/Minimap Management Interface(Cần Góp Ý Dịch)(Không Hoạt Động)</a></li>
+                    <li class="sidebar-small-list"><a href="worldcontainer.html">Quản Lí Vật Chứa/Container Management
+                            Interface(Cần Góp Ý Dịch)</a></li>
+                    <li class="sidebar-small-list"><a href="mapmark.html">Quản Lí Đánh Dấu Thế Giới/Minimap Management
+                            Interface(Cần Góp Ý Dịch)(Không Hoạt Động)</a></li>
                     <li class="sidebar-small-list"><a href="spawnport.html">Quản Lí Điểm Hồi Sinh</a></li>
                     <li class="sidebar-small-list"><a href="timer.html">Quản Lí Bộ Đếm Giờ</a></li>
-                    <li class="sidebar-small-list"><a href="graphic.html">Quản Lí Đồ Họa/Graphics and text information management interface(Không Hoạt Động)</a></li>
-                    <li class="sidebar-small-list"><a href="listenparam.html">Function monitoring management interface</a></li>
+                    <li class="sidebar-small-list"><a href="graphic.html">Quản Lí Đồ Họa/Graphics and text information
+                            management interface(Không Hoạt Động)</a></li>
+                    <li class="sidebar-small-list"><a href="listenparam.html">Function monitoring management
+                            interface</a></li>
                     <li class="sidebar-small-list"><a href="valuegroup.html">Quản Lí Nhóm Biến</a></li>
                     <li class="sidebar-small-list"><a href="costomui.html">Quản Lí UI</a></li>
                     <li class="sidebar-small-list"><a href="displayboard.html">Quản Lí Bảng Hiện Thị</a></li>
@@ -65,7 +72,7 @@
                 <h1>Sự Kiện</h1>
                 <div>Bạn có thể thêm sự kiện như các ví dụ sau:</div>
                 <div class="code-block">
-<pre><code><span><span class="comment">-- Sự Kiện Của Game</span>
+                    <pre><code><span><span class="comment">-- Sự Kiện Của Game</span>
 ScriptSupportEvent:registerEvent(<span class="math">[=[Game.Start]=]</span>, Game_StartGame)
 ScriptSupportEvent:registerEvent(<span class="math">[=[Game.Run]=]</span>, Game_Update)
 ScriptSupportEvent:registerEvent(<span class="math">[=[Game.End]=]</span>, Game_GameOver)
@@ -78,7 +85,7 @@ ScriptSupportEvent:registerEvent(<span class="math">[=[Block.Add]=]</span>, Bloc
 ScriptSupportEvent:registerEvent(<span class="math">[=[Block.DestroyBy]=]</span>, Block_Destroy)
 ScriptSupportEvent:registerEvent(<span class="math">[=[Block.Trigger]=]</span>, Block_Trigger)</span>
 </code></pre>
-            </div>
+                </div>
             </section>
             <section id="event-type">
                 <h1>Các loại sự kiện:</h1>
@@ -138,1581 +145,1581 @@ ScriptSupportEvent:registerEvent(<span class="math">[=[Block.Trigger]=]</span>, 
             <section id="1">
                 <h1>Sự Kiện Game</h1>
                 <figure>
-            <table>
-            <tbody>
-            <tr>
-            <td style="font-weight: bold;font-size: larger;">Tên</td>
-            <td style="font-weight: bold;font-size: larger;">Cách Sử Dụng</td>
-            <td style="font-weight: bold;font-size: larger;">Các Tham Số</td>
-            <td style="font-weight: bold;font-size: larger;">Mô Tả Tham Số</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Backpack.ItemChange</td>
-            <td rowspan="4">Changes in props in container</td>
-            <td>blockid</td>
-            <td>block type</td>
-            </tr>
-            <tr>
-            <td >itemid</td>
-            <td>prop type</td>
-            </tr>
-            <tr>
-            <td >itemnum</td>
-            <td >&nbsp;prop quantity</td>
-            </tr>
-            <tr>
-            <td >x,y,z</td>
-            <td >&nbsp;block coordinates</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Backpack.ItemPutIn</td>
-            <td rowspan="4">There are props in the container</td>
-            <td >blockid</td>
-            <td>block type</td>
-            </tr>
-            <tr>
-            <td >itemid</td>
-            <td>prop type</td>
-            </tr>
-            <tr>
-            <td >itemnum</td>
-            <td >&nbsp;prop quantity</td>
-            </tr>
-            <tr>
-            <td >x,y,z</td>
-            <td >&nbsp;block coordinates</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Backpack.ItemTakeOut</td>
-            <td rowspan="4">There are items in the container. Take them out.</td>
-            <td >blockid</td>
-            <td>block type</td>
-            </tr>
-            <tr>
-            <td >itemid</td>
-            <td>prop type</td>
-            </tr>
-            <tr>
-            <td >itemnum</td>
-            <td >&nbsp;prop quantity</td>
-            </tr>
-            <tr>
-            <td >x,y,z</td>
-            <td >&nbsp;block coordinates</td>
-            </tr>
-            </tbody>
-            </table>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td style="font-weight: bold;font-size: larger;">Tên</td>
+                                <td style="font-weight: bold;font-size: larger;">Cách Sử Dụng</td>
+                                <td style="font-weight: bold;font-size: larger;">Các Tham Số</td>
+                                <td style="font-weight: bold;font-size: larger;">Mô Tả Tham Số</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Backpack.ItemChange</td>
+                                <td rowspan="4">Changes in props in container</td>
+                                <td>blockid</td>
+                                <td>block type</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>prop type</td>
+                            </tr>
+                            <tr>
+                                <td>itemnum</td>
+                                <td>&nbsp;prop quantity</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>&nbsp;block coordinates</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Backpack.ItemPutIn</td>
+                                <td rowspan="4">There are props in the container</td>
+                                <td>blockid</td>
+                                <td>block type</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>prop type</td>
+                            </tr>
+                            <tr>
+                                <td>itemnum</td>
+                                <td>&nbsp;prop quantity</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>&nbsp;block coordinates</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Backpack.ItemTakeOut</td>
+                                <td rowspan="4">There are items in the container. Take them out.</td>
+                                <td>blockid</td>
+                                <td>block type</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>prop type</td>
+                            </tr>
+                            <tr>
+                                <td>itemnum</td>
+                                <td>&nbsp;prop quantity</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>&nbsp;block coordinates</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </figure>
             </section>
             <section id="2">
                 <h1>Sự Kiện Logic Của Game</h1>
                 <figure>
-            <table>
-            <tbody>
-            <tr>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Tên</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Cách Sử Dụng</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Các Tham Số</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Mô Tả Tham Số</td>
-            </tr>
-            <tr>
-            <td >Game.Hour</td>
-            <td >Universal Hour Time Change</td>
-            <td>hour</td>
-            <td >game hours</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Game.RunTime</td>
-            <td rowspan="2">World Tick Changes</td>
-            <td>second</td>
-            <td>game minutes</td>
-            </tr>
-            <tr>
-            <td >&nbsp;ticks</td>
-            <td >&nbsp;game seconds</td>
-            </tr>
-            </tbody>
-            </table>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Tên</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Cách Sử Dụng</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Các Tham Số</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Mô Tả Tham Số</td>
+                            </tr>
+                            <tr>
+                                <td>Game.Hour</td>
+                                <td>Universal Hour Time Change</td>
+                                <td>hour</td>
+                                <td>game hours</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Game.RunTime</td>
+                                <td rowspan="2">World Tick Changes</td>
+                                <td>second</td>
+                                <td>game minutes</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;ticks</td>
+                                <td>&nbsp;game seconds</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </figure>
                 <p>&nbsp;</p>
             </section>
             <section id="3">
                 <h1>Sự Kiện Người Chơi</h1>
                 <figure>
-            <table>
-            <colgroup>
-            <col >
-            <col >
-            <col >
-            <col >
-            </colgroup>
-            <tbody>
-            <tr>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Tên</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Cách Sử Dụng</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Các Tham Số</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Mô Tả Tham Số</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Game.AnyPlayer.Defeat</td>
-            <td rowspan="3">Either player loses</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >shortix</td>
-            <td >quick bar index</td>
-            </tr>
-            <tr>
-            <td >x,y,z</td>
-            <td >coordinate position</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Game.AnyPlayer.EnterGame</td>
-            <td  rowspan="3">Any player enters</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >shortix</td>
-            <td >quick bar index</td>
-            </tr>
-            <tr>
-            <td >x,y,z</td>
-            <td >coordinate position</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Game.AnyPlayer.LeaveGame</td>
-            <td  rowspan="3">Any player leaves</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >shortix</td>
-            <td >quick bar index</td>
-            </tr>
-            <tr>
-            <td >x,y,z</td>
-            <td >coordinate position</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Game.AnyPlayer.Victory</td>
-            <td  rowspan="3">Either player wins</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >shortix</td>
-            <td >quick bar index</td>
-            </tr>
-            <tr>
-            <td >x,y,z</td>
-            <td >coordinate position</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Player.AddBuff</td>
-            <td  rowspan="3">Player gains status effect</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >buffid</td>
-            <td >state id</td>
-            </tr>
-            <tr>
-            <td >bufflvl</td>
-            <td >state level</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Player.AddItem</td>
-            <td  rowspan="3">Players get props</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >itemid</td>
-            <td >item type</td>
-            </tr>
-            <tr>
-            <td >itemnum</td>
-            <td >item quantity</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Player.AreaIn</td>
-            <td  rowspan="2">Player enters area</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >areaid</td>
-            <td >region id</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Player.AreaOut</td>
-            <td  rowspan="2">Player leaves area</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >areaid</td>
-            <td >region id</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Player.AttackHit</td>
-            <td  rowspan="2">Player hits the target</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >targetactorid</td>
-            <td >attacked object</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Player.Attack</td>
-            <td  rowspan="3">Player Attack</td>
-            <td >eventobjid</td>
-            <td >player attack</td>
-            </tr>
-            <tr>
-            <td >shortix</td>
-            <td >&nbsp;</td>
-            </tr>
-            <tr>
-            <td >x,y,z</td>
-            <td >&nbsp;</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Player.BackPackChange</td>
-            <td  rowspan="4">Backpack bar changes</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >itemid</td>
-            <td >item type</td>
-            </tr>
-            <tr>
-            <td >itemnum</td>
-            <td >item quantity</td>
-            </tr>
-            <tr>
-            <td >itemix</td>
-            <td >item grid index</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Player.BeHurt</td>
-            <td  rowspan="2">Player takes damage</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >hurtlv</td>
-            <td >damage value</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Player.ChangeAttr</td>
-            <td  rowspan="4">Player attribute changes</td>
-            <td >shortix</td>
-            <td >quickbar index</td>
-            </tr>
-            <tr>
-            <td >playerattr</td>
-            <td >changed attribute</td>
-            </tr>
-            <tr>
-            <td >playerattrval</td>
-            <td >the value of the change</td>
-            </tr>
-            <tr>
-            <td >x,y,z</td>
-            <td >the coordinate position</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Player.ClickActor</td>
-            <td  rowspan="2">Click on the creature</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >targetactorid</td>
-            <td >the object being clicked</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Player.ClickBlock</td>
-            <td  rowspan="3">Click the block</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >blockid</td>
-            <td >clicked block type</td>
-            </tr>
-            <tr>
-            <td >x,y,z</td>
-            <td >block position</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Player.Collide</td>
-            <td  rowspan="2">Player-player/mob collision</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >toobjid</td>
-            <td >target object</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Player.ConsumeItem</td>
-            <td  rowspan="3">Players consume items</td>
-            <td >eventobjid</td>
-            <td >players consume items</td>
-            </tr>
-            <tr>
-            <td >itemid</td>
-            <td >&nbsp;</td>
-            </tr>
-            <tr>
-            <td >itemnum</td>
-            <td >&nbsp;</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Player.DamageActor</td>
-            <td  rowspan="4">Player causes damage</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >toobjid</td>
-            <td >event target object</td>
-            </tr>
-            <tr>
-            <td >targetactorid</td>
-            <td >target player</td>
-            </tr>
-            <tr>
-            <td >hurtlv</td>
-            <td >damage value</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Player.DefeatActor</td>
-            <td  rowspan="3">Player defeats the target</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >toobjid</td>
-            <td >event target object</td>
-            </tr>
-            <tr>
-            <td >targetactorid</td>
-            <td >the target of attack</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Player.Die</td>
-            <td  rowspan="3">Player Death</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >shortix</td>
-            <td >quick bar index</td>
-            </tr>
-            <tr>
-            <td >x,y,z</td>
-            <td >coordinate position</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Player.DiscardItem</td>
-            <td  rowspan="4">Discarding items</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >itemid</td>
-            <td >item type</td>
-            </tr>
-            <tr>
-            <td >itemnum</td>
-            <td >item quantity</td>
-            </tr>
-            <tr>
-            <td >toobjid</td>
-            <td >dropped item objid</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Player.DismountActor</td>
-            <td  rowspan="2">Player riding down</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >targetactorid</td>
-            <td >attacked object</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Player.EquipChange</td>
-            <td  rowspan="4">Equipment Bar Changes</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >itemid</td>
-            <td >item type</td>
-            </tr>
-            <tr>
-            <td >itemnum</td>
-            <td >item quantity</td>
-            </tr>
-            <tr>
-            <td >itemix</td>
-            <td >the grid index where the prop is located</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Player.EquipOff</td>
-            <td  rowspan="4">Take off your gear</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >itemid</td>
-            <td >item type</td>
-            </tr>
-            <tr>
-            <td >itemnum</td>
-            <td >item quantity</td>
-            </tr>
-            <tr>
-            <td >itemix</td>
-            <td >the grid index where the prop is located</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Player.EquipOn</td>
-            <td  rowspan="4">Put on your gear</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >itemid</td>
-            <td >item type</td>
-            </tr>
-            <tr>
-            <td >itemnum</td>
-            <td >item quantity</td>
-            </tr>
-            <tr>
-            <td >itemix</td>
-            <td >the grid index where the prop is located</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Player.InputContent</td>
-            <td  rowspan="2">Input string</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >content</td>
-            <td >string in the event</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Player.InputKeyDown</td>
-            <td  rowspan="2">The player presses a button</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >vkey</td>
-            <td >key value pressed</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Player.InputKeyOnPress</td>
-            <td  rowspan="2">Player long press button</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >vkey</td>
-            <td >key value pressed</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Player.InputKeyUp</td>
-            <td  rowspan="2">The player releases the button</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >vkey</td>
-            <td >key value pressed</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Player.InvateFriend</td>
-            <td  rowspan="2">invite friends&nbsp;</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >toobjid</td>
-            <td >event target player</td>
-            </tr>
-            <tr>
-            <td >Player.LevelModelUpgrade</td>
-            <td >Player level changes</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Player.MotionStateChange</td>
-            <td  rowspan="2">Player behavior status changes</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >playermotion</td>
-            <td >behavior state enumeration</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Player.MountActor</td>
-            <td  rowspan="2">Player riding on</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >targetactorid</td>
-            <td >attacked object</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Player.MoveOneBlockSize</td>
-            <td  rowspan="3">Player moves (one square)</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >shortix</td>
-            <td >&nbsp;</td>
-            </tr>
-            <tr>
-            <td >x,y,z</td>
-            <td >&nbsp;</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Player.NewInputContent</td>
-            <td  rowspan="2">Type from the chat box</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >content</td>
-            <td >string in the event</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Player.PickUpItem</td>
-            <td  rowspan="4">Player Pickup</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >toobjid</td>
-            <td >dropped item objid</td>
-            </tr>
-            <tr>
-            <td >itemid</td>
-            <td >item type id</td>
-            </tr>
-            <tr>
-            <td >itemnum</td>
-            <td >item quantity</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Player.PlayAction</td>
-            <td  rowspan="2">Player uses emotes</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >act</td>
-            <td >action id</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Player.RemoveBuff</td>
-            <td  rowspan="3">The player loses the specified status effect</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >buffid</td>
-            <td >state id</td>
-            </tr>
-            <tr>
-            <td >bufflvl</td>
-            <td >state level</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Player.Revive</td>
-            <td  rowspan="3">Player Resurrection</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >shortix</td>
-            <td >quick bar index</td>
-            </tr>
-            <tr>
-            <td >x,y,z</td>
-            <td >coordinate position</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Player.SelectShortcut</td>
-            <td  rowspan="3">Quick Bar Selection</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >itemid</td>
-            <td >item type</td>
-            </tr>
-            <tr>
-            <td >itemnum</td>
-            <td >item quantity</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Player.ShortcutChange</td>
-            <td  rowspan="4">Quick Bar Changes</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >itemid</td>
-            <td >item type</td>
-            </tr>
-            <tr>
-            <td >itemnum</td>
-            <td >item quantity</td>
-            </tr>
-            <tr>
-            <td >itemix</td>
-            <td >the grid index where the prop is located</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Player.UseGiftPack</td>
-            <td  rowspan="3">Locally this package prop is used []</td>
-            <td >eventobjid</td>
-            <td >event object</td>
-            </tr>
-            <tr>
-            <td >itemid</td>
-            <td >prop type</td>
-            </tr>
-            <tr>
-            <td >itemnum</td>
-            <td >prop quantity</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Player.UseItem</td>
-            <td rowspan="4">Players use props</td>
-            <td >eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >itemid</td>
-            <td >item type</td>
-            </tr>
-            <tr>
-            <td >itemnum</td>
-            <td >item quantity</td>
-            </tr>
-            <tr>
-            <td >itemix</td>
-            <td >the grid index where the prop is located</td>
-            </tr>
-            </tbody>
-            </table>
+                    <table>
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Tên</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Cách Sử Dụng</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Các Tham Số</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Mô Tả Tham Số</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Game.AnyPlayer.Defeat</td>
+                                <td rowspan="3">Either player loses</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>shortix</td>
+                                <td>quick bar index</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>coordinate position</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Game.AnyPlayer.EnterGame</td>
+                                <td rowspan="3">Any player enters</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>shortix</td>
+                                <td>quick bar index</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>coordinate position</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Game.AnyPlayer.LeaveGame</td>
+                                <td rowspan="3">Any player leaves</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>shortix</td>
+                                <td>quick bar index</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>coordinate position</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Game.AnyPlayer.Victory</td>
+                                <td rowspan="3">Either player wins</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>shortix</td>
+                                <td>quick bar index</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>coordinate position</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Player.AddBuff</td>
+                                <td rowspan="3">Player gains status effect</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>buffid</td>
+                                <td>state id</td>
+                            </tr>
+                            <tr>
+                                <td>bufflvl</td>
+                                <td>state level</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Player.AddItem</td>
+                                <td rowspan="3">Players get props</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>item type</td>
+                            </tr>
+                            <tr>
+                                <td>itemnum</td>
+                                <td>item quantity</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Player.AreaIn</td>
+                                <td rowspan="2">Player enters area</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>areaid</td>
+                                <td>region id</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Player.AreaOut</td>
+                                <td rowspan="2">Player leaves area</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>areaid</td>
+                                <td>region id</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Player.AttackHit</td>
+                                <td rowspan="2">Player hits the target</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>targetactorid</td>
+                                <td>attacked object</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Player.Attack</td>
+                                <td rowspan="3">Player Attack</td>
+                                <td>eventobjid</td>
+                                <td>player attack</td>
+                            </tr>
+                            <tr>
+                                <td>shortix</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Player.BackPackChange</td>
+                                <td rowspan="4">Backpack bar changes</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>item type</td>
+                            </tr>
+                            <tr>
+                                <td>itemnum</td>
+                                <td>item quantity</td>
+                            </tr>
+                            <tr>
+                                <td>itemix</td>
+                                <td>item grid index</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Player.BeHurt</td>
+                                <td rowspan="2">Player takes damage</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>hurtlv</td>
+                                <td>damage value</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Player.ChangeAttr</td>
+                                <td rowspan="4">Player attribute changes</td>
+                                <td>shortix</td>
+                                <td>quickbar index</td>
+                            </tr>
+                            <tr>
+                                <td>playerattr</td>
+                                <td>changed attribute</td>
+                            </tr>
+                            <tr>
+                                <td>playerattrval</td>
+                                <td>the value of the change</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>the coordinate position</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Player.ClickActor</td>
+                                <td rowspan="2">Click on the creature</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>targetactorid</td>
+                                <td>the object being clicked</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Player.ClickBlock</td>
+                                <td rowspan="3">Click the block</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>blockid</td>
+                                <td>clicked block type</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>block position</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Player.Collide</td>
+                                <td rowspan="2">Player-player/mob collision</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>toobjid</td>
+                                <td>target object</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Player.ConsumeItem</td>
+                                <td rowspan="3">Players consume items</td>
+                                <td>eventobjid</td>
+                                <td>players consume items</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>itemnum</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Player.DamageActor</td>
+                                <td rowspan="4">Player causes damage</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>toobjid</td>
+                                <td>event target object</td>
+                            </tr>
+                            <tr>
+                                <td>targetactorid</td>
+                                <td>target player</td>
+                            </tr>
+                            <tr>
+                                <td>hurtlv</td>
+                                <td>damage value</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Player.DefeatActor</td>
+                                <td rowspan="3">Player defeats the target</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>toobjid</td>
+                                <td>event target object</td>
+                            </tr>
+                            <tr>
+                                <td>targetactorid</td>
+                                <td>the target of attack</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Player.Die</td>
+                                <td rowspan="3">Player Death</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>shortix</td>
+                                <td>quick bar index</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>coordinate position</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Player.DiscardItem</td>
+                                <td rowspan="4">Discarding items</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>item type</td>
+                            </tr>
+                            <tr>
+                                <td>itemnum</td>
+                                <td>item quantity</td>
+                            </tr>
+                            <tr>
+                                <td>toobjid</td>
+                                <td>dropped item objid</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Player.DismountActor</td>
+                                <td rowspan="2">Player riding down</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>targetactorid</td>
+                                <td>attacked object</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Player.EquipChange</td>
+                                <td rowspan="4">Equipment Bar Changes</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>item type</td>
+                            </tr>
+                            <tr>
+                                <td>itemnum</td>
+                                <td>item quantity</td>
+                            </tr>
+                            <tr>
+                                <td>itemix</td>
+                                <td>the grid index where the prop is located</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Player.EquipOff</td>
+                                <td rowspan="4">Take off your gear</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>item type</td>
+                            </tr>
+                            <tr>
+                                <td>itemnum</td>
+                                <td>item quantity</td>
+                            </tr>
+                            <tr>
+                                <td>itemix</td>
+                                <td>the grid index where the prop is located</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Player.EquipOn</td>
+                                <td rowspan="4">Put on your gear</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>item type</td>
+                            </tr>
+                            <tr>
+                                <td>itemnum</td>
+                                <td>item quantity</td>
+                            </tr>
+                            <tr>
+                                <td>itemix</td>
+                                <td>the grid index where the prop is located</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Player.InputContent</td>
+                                <td rowspan="2">Input string</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>content</td>
+                                <td>string in the event</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Player.InputKeyDown</td>
+                                <td rowspan="2">The player presses a button</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>vkey</td>
+                                <td>key value pressed</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Player.InputKeyOnPress</td>
+                                <td rowspan="2">Player long press button</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>vkey</td>
+                                <td>key value pressed</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Player.InputKeyUp</td>
+                                <td rowspan="2">The player releases the button</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>vkey</td>
+                                <td>key value pressed</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Player.InvateFriend</td>
+                                <td rowspan="2">invite friends&nbsp;</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>toobjid</td>
+                                <td>event target player</td>
+                            </tr>
+                            <tr>
+                                <td>Player.LevelModelUpgrade</td>
+                                <td>Player level changes</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Player.MotionStateChange</td>
+                                <td rowspan="2">Player behavior status changes</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>playermotion</td>
+                                <td>behavior state enumeration</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Player.MountActor</td>
+                                <td rowspan="2">Player riding on</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>targetactorid</td>
+                                <td>attacked object</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Player.MoveOneBlockSize</td>
+                                <td rowspan="3">Player moves (one square)</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>shortix</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Player.NewInputContent</td>
+                                <td rowspan="2">Type from the chat box</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>content</td>
+                                <td>string in the event</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Player.PickUpItem</td>
+                                <td rowspan="4">Player Pickup</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>toobjid</td>
+                                <td>dropped item objid</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>item type id</td>
+                            </tr>
+                            <tr>
+                                <td>itemnum</td>
+                                <td>item quantity</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Player.PlayAction</td>
+                                <td rowspan="2">Player uses emotes</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>act</td>
+                                <td>action id</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Player.RemoveBuff</td>
+                                <td rowspan="3">The player loses the specified status effect</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>buffid</td>
+                                <td>state id</td>
+                            </tr>
+                            <tr>
+                                <td>bufflvl</td>
+                                <td>state level</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Player.Revive</td>
+                                <td rowspan="3">Player Resurrection</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>shortix</td>
+                                <td>quick bar index</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>coordinate position</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Player.SelectShortcut</td>
+                                <td rowspan="3">Quick Bar Selection</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>item type</td>
+                            </tr>
+                            <tr>
+                                <td>itemnum</td>
+                                <td>item quantity</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Player.ShortcutChange</td>
+                                <td rowspan="4">Quick Bar Changes</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>item type</td>
+                            </tr>
+                            <tr>
+                                <td>itemnum</td>
+                                <td>item quantity</td>
+                            </tr>
+                            <tr>
+                                <td>itemix</td>
+                                <td>the grid index where the prop is located</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Player.UseGiftPack</td>
+                                <td rowspan="3">Locally this package prop is used []</td>
+                                <td>eventobjid</td>
+                                <td>event object</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>prop type</td>
+                            </tr>
+                            <tr>
+                                <td>itemnum</td>
+                                <td>prop quantity</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Player.UseItem</td>
+                                <td rowspan="4">Players use props</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>item type</td>
+                            </tr>
+                            <tr>
+                                <td>itemnum</td>
+                                <td>item quantity</td>
+                            </tr>
+                            <tr>
+                                <td>itemix</td>
+                                <td>the grid index where the prop is located</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </figure>
             </section>
             <section id="4">
                 <h1>Sự Kiện Sinh Vật</h1>
                 <figure>
-            <table>
-            <tbody>
-            <tr>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Tên</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Cách Sử Dụng</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Các Tham Số</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Mô Tả Tham Số</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Actor.AddBuff</td>
-            <td rowspan="4">Mobs gain status effects</td>
-            <td>eventobjid</td>
-            <td >event creature</td>
-            </tr>
-            <tr>
-            <td>actorid</td>
-            <td >event creature type</td>
-            </tr>
-            <tr>
-            <td>buffid</td>
-            <td >state id</td>
-            </tr>
-            <tr>
-            <td>bufflvl</td>
-            <td >state level</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Actor.AreaIn</td>
-            <td rowspan="2">Biological entry area</td>
-            <td>eventobjid</td>
-            <td >event creature</td>
-            </tr>
-            <tr>
-            <td>areaid</td>
-            <td >area id</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Actor.AreaOut</td>
-            <td rowspan="2">The creature leaves the area</td>
-            <td>eventobjid</td>
-            <td >event creature</td>
-            </tr>
-            <tr>
-            <td>areaid</td>
-            <td >area id</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Actor.AttackHit</td>
-            <td rowspan="4">Attack Hit</td>
-            <td>eventobjid</td>
-            <td >event creature</td>
-            </tr>
-            <tr>
-            <td>toobjid</td>
-            <td >attack target</td>
-            </tr>
-            <tr>
-            <td>actorid</td>
-            <td >event creature type</td>
-            </tr>
-            <tr>
-            <td>targetactorid</td>
-            <td >type of creature attacked</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Actor.Attack</td>
-            <td rowspan="4">attack</td>
-            <td>eventobjid</td>
-            <td >event creature</td>
-            </tr>
-            <tr>
-            <td>toobjid</td>
-            <td >attack target</td>
-            </tr>
-            <tr>
-            <td>actorid</td>
-            <td >event creature type</td>
-            </tr>
-            <tr>
-            <td>targetactorid</td>
-            <td >type of creature attacked</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Actor.BeHurt</td>
-            <td rowspan="4">Hurt</td>
-            <td>eventobjid</td>
-            <td>event creature</td>
-            </tr>
-            <tr>
-            <td>toobjid</td>
-            <td >attack target</td>
-            </tr>
-            <tr>
-            <td>hurtlv</td>
-            <td >damage value</td>
-            </tr>
-            <tr>
-            <td>actorid</td>
-            <td >event creature type</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Actor.Beat</td>
-            <td rowspan="4">Mob defeats player/mob</td>
-            <td>eventobjid</td>
-            <td>event creature</td>
-            </tr>
-            <tr>
-            <td>toobjid</td>
-            <td >attack target</td>
-            </tr>
-            <tr>
-            <td>actorid</td>
-            <td >event creature type</td>
-            </tr>
-            <tr>
-            <td>targetactorid</td>
-            <td >type of creature attacked</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Actor.ChangeAttr</td>
-            <td rowspan="4">Property changes</td>
-            <td>eventobjid</td>
-            <td>event creature</td>
-            </tr>
-            <tr>
-            <td>actorid</td>
-            <td >event creature type</td>
-            </tr>
-            <tr>
-            <td>actorattr</td>
-            <td >attribute enumeration value</td>
-            </tr>
-            <tr>
-            <td>actorattrval</td>
-            <td >changed value</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Actor.ChangeMotion</td>
-            <td rowspan="3">The creature's behavioral state changes to [n]</td>
-            <td>eventobjid</td>
-            <td >event creature</td>
-            </tr>
-            <tr>
-            <td>actorid</td>
-            <td >event creature type</td>
-            </tr>
-            <tr>
-            <td>actormotion</td>
-            <td >action enumeration value</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Actor.Collide</td>
-            <td rowspan="4">Colliding with a player/mob</td>
-            <td>eventobjid</td>
-            <td >event creature</td>
-            </tr>
-            <tr>
-            <td>toobjid</td>
-            <td >attack target</td>
-            </tr>
-            <tr>
-            <td>actorid</td>
-            <td >event creature type</td>
-            </tr>
-            <tr>
-            <td>targetactorid</td>
-            <td >type of creature attacked</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Actor.Create</td>
-            <td rowspan="2">Created</td>
-            <td>eventobjid</td>
-            <td >event creature</td>
-            </tr>
-            <tr>
-            <td>actorid</td>
-            <td >event creature type</td>
-            </tr>
-            <tr>
-            <td rowspan="5">Actor.Damage</td>
-            <td rowspan="5">cause some damages</td>
-            <td>eventobjid</td>
-            <td >event creature</td>
-            </tr>
-            <tr>
-            <td>toobjid</td>
-            <td >attack target</td>
-            </tr>
-            <tr>
-            <td>hurtlv</td>
-            <td >damage value</td>
-            </tr>
-            <tr>
-            <td>actorid</td>
-            <td >event creature type</td>
-            </tr>
-            <tr>
-            <td>targetactorid</td>
-            <td >type of creature attacked</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Actor.Die</td>
-            <td rowspan="3">die</td>
-            <td>eventobjid</td>
-            <td >event creature</td>
-            </tr>
-            <tr>
-            <td>toobjid</td>
-            <td >attack target</td>
-            </tr>
-            <tr>
-            <td>actorid</td>
-            <td >event creature type</td>
-            </tr>
-            <tr>
-            <td rowspan="6">Actor.Projectile.Hit</td>
-            <td rowspan="6">Throwing objects hit</td>
-            <td>eventobjid</td>
-            <td >event throwing object</td>
-            </tr>
-            <tr>
-            <td>toobjid</td>
-            <td >hit object</td>
-            </tr>
-            <tr>
-            <td>itemid</td>
-            <td >prop type</td>
-            </tr>
-            <tr>
-            <td>targetactorid</td>
-            <td >the type of creature hit</td>
-            </tr>
-            <tr>
-            <td>x,y,z</td>
-            <td >the block coordinates</td>
-            </tr>
-            <tr>
-            <td>helperobjid</td>
-            <td >object of the thrown object</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Actor.RemoveBuff</td>
-            <td rowspan="4">Mobs lose status effects</td>
-            <td>eventobjid</td>
-            <td >event creature</td>
-            </tr>
-            <tr>
-            <td>actorid</td>
-            <td >event creature type</td>
-            </tr>
-            <tr>
-            <td>buffid</td>
-            <td >state id</td>
-            </tr>
-            <tr>
-            <td>bufflvl</td>
-            <td>state level</td>
-            </tr>
-            </tbody>
-            </table>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Tên</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Cách Sử Dụng</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Các Tham Số</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Mô Tả Tham Số</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Actor.AddBuff</td>
+                                <td rowspan="4">Mobs gain status effects</td>
+                                <td>eventobjid</td>
+                                <td>event creature</td>
+                            </tr>
+                            <tr>
+                                <td>actorid</td>
+                                <td>event creature type</td>
+                            </tr>
+                            <tr>
+                                <td>buffid</td>
+                                <td>state id</td>
+                            </tr>
+                            <tr>
+                                <td>bufflvl</td>
+                                <td>state level</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Actor.AreaIn</td>
+                                <td rowspan="2">Biological entry area</td>
+                                <td>eventobjid</td>
+                                <td>event creature</td>
+                            </tr>
+                            <tr>
+                                <td>areaid</td>
+                                <td>area id</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Actor.AreaOut</td>
+                                <td rowspan="2">The creature leaves the area</td>
+                                <td>eventobjid</td>
+                                <td>event creature</td>
+                            </tr>
+                            <tr>
+                                <td>areaid</td>
+                                <td>area id</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Actor.AttackHit</td>
+                                <td rowspan="4">Attack Hit</td>
+                                <td>eventobjid</td>
+                                <td>event creature</td>
+                            </tr>
+                            <tr>
+                                <td>toobjid</td>
+                                <td>attack target</td>
+                            </tr>
+                            <tr>
+                                <td>actorid</td>
+                                <td>event creature type</td>
+                            </tr>
+                            <tr>
+                                <td>targetactorid</td>
+                                <td>type of creature attacked</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Actor.Attack</td>
+                                <td rowspan="4">attack</td>
+                                <td>eventobjid</td>
+                                <td>event creature</td>
+                            </tr>
+                            <tr>
+                                <td>toobjid</td>
+                                <td>attack target</td>
+                            </tr>
+                            <tr>
+                                <td>actorid</td>
+                                <td>event creature type</td>
+                            </tr>
+                            <tr>
+                                <td>targetactorid</td>
+                                <td>type of creature attacked</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Actor.BeHurt</td>
+                                <td rowspan="4">Hurt</td>
+                                <td>eventobjid</td>
+                                <td>event creature</td>
+                            </tr>
+                            <tr>
+                                <td>toobjid</td>
+                                <td>attack target</td>
+                            </tr>
+                            <tr>
+                                <td>hurtlv</td>
+                                <td>damage value</td>
+                            </tr>
+                            <tr>
+                                <td>actorid</td>
+                                <td>event creature type</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Actor.Beat</td>
+                                <td rowspan="4">Mob defeats player/mob</td>
+                                <td>eventobjid</td>
+                                <td>event creature</td>
+                            </tr>
+                            <tr>
+                                <td>toobjid</td>
+                                <td>attack target</td>
+                            </tr>
+                            <tr>
+                                <td>actorid</td>
+                                <td>event creature type</td>
+                            </tr>
+                            <tr>
+                                <td>targetactorid</td>
+                                <td>type of creature attacked</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Actor.ChangeAttr</td>
+                                <td rowspan="4">Property changes</td>
+                                <td>eventobjid</td>
+                                <td>event creature</td>
+                            </tr>
+                            <tr>
+                                <td>actorid</td>
+                                <td>event creature type</td>
+                            </tr>
+                            <tr>
+                                <td>actorattr</td>
+                                <td>attribute enumeration value</td>
+                            </tr>
+                            <tr>
+                                <td>actorattrval</td>
+                                <td>changed value</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Actor.ChangeMotion</td>
+                                <td rowspan="3">The creature's behavioral state changes to [n]</td>
+                                <td>eventobjid</td>
+                                <td>event creature</td>
+                            </tr>
+                            <tr>
+                                <td>actorid</td>
+                                <td>event creature type</td>
+                            </tr>
+                            <tr>
+                                <td>actormotion</td>
+                                <td>action enumeration value</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Actor.Collide</td>
+                                <td rowspan="4">Colliding with a player/mob</td>
+                                <td>eventobjid</td>
+                                <td>event creature</td>
+                            </tr>
+                            <tr>
+                                <td>toobjid</td>
+                                <td>attack target</td>
+                            </tr>
+                            <tr>
+                                <td>actorid</td>
+                                <td>event creature type</td>
+                            </tr>
+                            <tr>
+                                <td>targetactorid</td>
+                                <td>type of creature attacked</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Actor.Create</td>
+                                <td rowspan="2">Created</td>
+                                <td>eventobjid</td>
+                                <td>event creature</td>
+                            </tr>
+                            <tr>
+                                <td>actorid</td>
+                                <td>event creature type</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="5">Actor.Damage</td>
+                                <td rowspan="5">cause some damages</td>
+                                <td>eventobjid</td>
+                                <td>event creature</td>
+                            </tr>
+                            <tr>
+                                <td>toobjid</td>
+                                <td>attack target</td>
+                            </tr>
+                            <tr>
+                                <td>hurtlv</td>
+                                <td>damage value</td>
+                            </tr>
+                            <tr>
+                                <td>actorid</td>
+                                <td>event creature type</td>
+                            </tr>
+                            <tr>
+                                <td>targetactorid</td>
+                                <td>type of creature attacked</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Actor.Die</td>
+                                <td rowspan="3">die</td>
+                                <td>eventobjid</td>
+                                <td>event creature</td>
+                            </tr>
+                            <tr>
+                                <td>toobjid</td>
+                                <td>attack target</td>
+                            </tr>
+                            <tr>
+                                <td>actorid</td>
+                                <td>event creature type</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="6">Actor.Projectile.Hit</td>
+                                <td rowspan="6">Throwing objects hit</td>
+                                <td>eventobjid</td>
+                                <td>event throwing object</td>
+                            </tr>
+                            <tr>
+                                <td>toobjid</td>
+                                <td>hit object</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>prop type</td>
+                            </tr>
+                            <tr>
+                                <td>targetactorid</td>
+                                <td>the type of creature hit</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>the block coordinates</td>
+                            </tr>
+                            <tr>
+                                <td>helperobjid</td>
+                                <td>object of the thrown object</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Actor.RemoveBuff</td>
+                                <td rowspan="4">Mobs lose status effects</td>
+                                <td>eventobjid</td>
+                                <td>event creature</td>
+                            </tr>
+                            <tr>
+                                <td>actorid</td>
+                                <td>event creature type</td>
+                            </tr>
+                            <tr>
+                                <td>buffid</td>
+                                <td>state id</td>
+                            </tr>
+                            <tr>
+                                <td>bufflvl</td>
+                                <td>state level</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </figure>
                 <p>&nbsp;</p>
             </section>
             <section id="5">
                 <h1>Sự Kiện Khối</h1>
                 <figure>
-            <table>
-            <tbody>
-            <tr>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Tên</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Cách Sử Dụng</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Các Tham Số</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Mô Tả Tham Số</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Block.Add</td>
-            <td rowspan="2">Created</td>
-            <td>blockid</td>
-            <td >block type</td>
-            </tr>
-            <tr>
-            <td>x,y,z</td>
-            <td >block coordinates</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Block.DestroyBy</td>
-            <td rowspan="3">When such blocks are destroyed locally</td>
-            <td>eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td>blockid</td>
-            <td >block type</td>
-            </tr>
-            <tr>
-            <td>x,y,z</td>
-            <td >block coordinates</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Block.Dig.Begin</td>
-            <td rowspan="3">When any block is mined</td>
-            <td>eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td>blockid</td>
-            <td >block type</td>
-            </tr>
-            <tr>
-            <td>x,y,z</td>
-            <td >block coordinates</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Block.Dig.Cancel</td>
-            <td rowspan="3">Any block is mined and canceled</td>
-            <td>eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td>blockid</td>
-            <td >block type</td>
-            </tr>
-            <tr>
-            <td>x,y,z</td>
-            <td >block coordinates</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Block.Dig.End</td>
-            <td rowspan="3">Blocks are mined</td>
-            <td>eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td>blockid</td>
-            <td >block type</td>
-            </tr>
-            <tr>
-            <td>x,y,z</td>
-            <td >block coordinates</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Block.Remove</td>
-            <td rowspan="2">Block removal</td>
-            <td>blockid</td>
-            <td >block type</td>
-            </tr>
-            <tr>
-            <td>x,y,z</td>
-            <td >block coordinates</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Block.Trigger</td>
-            <td rowspan="3">Active/Powered</td>
-            <td>eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td>blockid</td>
-            <td >block type</td>
-            </tr>
-            <tr>
-            <td>x,y,z</td>
-            <td>block coordinates</td>
-            </tr>
-            </tbody>
-            </table>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Tên</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Cách Sử Dụng</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Các Tham Số</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Mô Tả Tham Số</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Block.Add</td>
+                                <td rowspan="2">Created</td>
+                                <td>blockid</td>
+                                <td>block type</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>block coordinates</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Block.DestroyBy</td>
+                                <td rowspan="3">When such blocks are destroyed locally</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>blockid</td>
+                                <td>block type</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>block coordinates</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Block.Dig.Begin</td>
+                                <td rowspan="3">When any block is mined</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>blockid</td>
+                                <td>block type</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>block coordinates</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Block.Dig.Cancel</td>
+                                <td rowspan="3">Any block is mined and canceled</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>blockid</td>
+                                <td>block type</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>block coordinates</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Block.Dig.End</td>
+                                <td rowspan="3">Blocks are mined</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>blockid</td>
+                                <td>block type</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>block coordinates</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Block.Remove</td>
+                                <td rowspan="2">Block removal</td>
+                                <td>blockid</td>
+                                <td>block type</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>block coordinates</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Block.Trigger</td>
+                                <td rowspan="3">Active/Powered</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>blockid</td>
+                                <td>block type</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>block coordinates</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </figure>
                 <p>&nbsp;</p>
             </section>
             <section id="6">
                 <h1>Sự Kiện Vật Phẩm</h1>
                 <figure>
-            <table>
-            <tbody>
-            <tr>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Tên</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Cách Sử Dụng</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Các Tham Số</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Mô Tả Tham Số</td>
-            </tr>
-            <tr>
-            <td rowspan="3">DropItem.AreaIn</td>
-            <td rowspan="3">Drops enter the area</td>
-            <td>eventobjid</td>
-            <td >event drop</td>
-            </tr>
-            <tr>
-            <td>areaid</td>
-            <td >area id</td>
-            </tr>
-            <tr>
-            <td>item</td>
-            <td >item type</td>
-            </tr>
-            <tr>
-            <td rowspan="3">DropItem.AreaOut</td>
-            <td rowspan="3">Drops leave the area</td>
-            <td>eventobjid</td>
-            <td >event drop</td>
-            </tr>
-            <tr>
-            <td>areaid</td>
-            <td >area id</td>
-            </tr>
-            <tr>
-            <td>item</td>
-            <td >item type</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Item.Create</td>
-            <td rowspan="4">Drops are created</td>
-            <td>eventobjid</td>
-            <td >event drop</td>
-            </tr>
-            <tr>
-            <td>itemid</td>
-            <td >item type</td>
-            </tr>
-            <tr>
-            <td>defaultvalue</td>
-            <td >drop method</td>
-            </tr>
-            <tr>
-            <td>x,y,z</td>
-            <td >block coordinates</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Item.Destroy</td>
-            <td rowspan="3">When some of these equipment is destroyed</td>
-            <td>eventobjid</td>
-            <td >event object</td>
-            </tr>
-            <tr>
-            <td>itemid</td>
-            <td >prop type</td>
-            </tr>
-            <tr>
-            <td>itemnum</td>
-            <td >prop quantity</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Item.Disappear</td>
-            <td rowspan="4">Drops disappear</td>
-            <td>eventobjid</td>
-            <td >event drop</td>
-            </tr>
-            <tr>
-            <td>itemid</td>
-            <td >item type</td>
-            </tr>
-            <tr>
-            <td>itemnum</td>
-            <td >item quantity</td>
-            </tr>
-            <tr>
-            <td>x,y,z</td>
-            <td >block coordinates</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Item.Pickup</td>
-            <td rowspan="4">Drops are picked up</td>
-            <td>toobjid</td>
-            <td >object picked up</td>
-            </tr>
-            <tr>
-            <td>itemid</td>
-            <td >item type</td>
-            </tr>
-            <tr>
-            <td>itemnum</td>
-            <td >item quantity</td>
-            </tr>
-            <tr>
-            <td>x,y,z</td>
-            <td >block coordinates</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Item.expend</td>
-            <td rowspan="3">Part of this food item is consumed</td>
-            <td>eventobjid</td>
-            <td >event object</td>
-            </tr>
-            <tr>
-            <td>itemid</td>
-            <td >prop type</td>
-            </tr>
-            <tr>
-            <td>itemnum</td>
-            <td >prop quantity</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Missile.AreaIn</td>
-            <td rowspan="4">Throwing objects into the area</td>
-            <td>eventobjid</td>
-            <td >event throw</td>
-            </tr>
-            <tr>
-            <td>areaid</td>
-            <td >area id</td>
-            </tr>
-            <tr>
-            <td>itemid</td>
-            <td >item type</td>
-            </tr>
-            <tr>
-            <td>helperobjid</td>
-            <td >object of the thrown object</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Missile.AreaOut</td>
-            <td rowspan="4">Throwing objects leave the area</td>
-            <td>eventobjid</td>
-            <td >event throw</td>
-            </tr>
-            <tr>
-            <td>areaid</td>
-            <td >area id</td>
-            </tr>
-            <tr>
-            <td>itemid</td>
-            <td >item type</td>
-            </tr>
-            <tr>
-            <td>helperobjid</td>
-            <td >object of the thrown object</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Missile.Create</td>
-            <td rowspan="4">Throwables are created</td>
-            <td>eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td>itemid</td>
-            <td >item type</td>
-            </tr>
-            <tr>
-            <td>toobjid</td>
-            <td >event throwable</td>
-            </tr>
-            <tr>
-            <td>x,y,z</td>
-            <td >block coordinates</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Particle.Item.OnCreate</td>
-            <td rowspan="3">When the effect is created on the drop</td>
-            <td>eventobjid</td>
-            <td >event drop</td>
-            </tr>
-            <tr>
-            <td>effectid</td>
-            <td >special effect type</td>
-            </tr>
-            <tr>
-            <td>x,y,z</td>
-            <td>block position</td>
-            </tr>
-            </tbody>
-            </table>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Tên</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Cách Sử Dụng</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Các Tham Số</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Mô Tả Tham Số</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">DropItem.AreaIn</td>
+                                <td rowspan="3">Drops enter the area</td>
+                                <td>eventobjid</td>
+                                <td>event drop</td>
+                            </tr>
+                            <tr>
+                                <td>areaid</td>
+                                <td>area id</td>
+                            </tr>
+                            <tr>
+                                <td>item</td>
+                                <td>item type</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">DropItem.AreaOut</td>
+                                <td rowspan="3">Drops leave the area</td>
+                                <td>eventobjid</td>
+                                <td>event drop</td>
+                            </tr>
+                            <tr>
+                                <td>areaid</td>
+                                <td>area id</td>
+                            </tr>
+                            <tr>
+                                <td>item</td>
+                                <td>item type</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Item.Create</td>
+                                <td rowspan="4">Drops are created</td>
+                                <td>eventobjid</td>
+                                <td>event drop</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>item type</td>
+                            </tr>
+                            <tr>
+                                <td>defaultvalue</td>
+                                <td>drop method</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>block coordinates</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Item.Destroy</td>
+                                <td rowspan="3">When some of these equipment is destroyed</td>
+                                <td>eventobjid</td>
+                                <td>event object</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>prop type</td>
+                            </tr>
+                            <tr>
+                                <td>itemnum</td>
+                                <td>prop quantity</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Item.Disappear</td>
+                                <td rowspan="4">Drops disappear</td>
+                                <td>eventobjid</td>
+                                <td>event drop</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>item type</td>
+                            </tr>
+                            <tr>
+                                <td>itemnum</td>
+                                <td>item quantity</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>block coordinates</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Item.Pickup</td>
+                                <td rowspan="4">Drops are picked up</td>
+                                <td>toobjid</td>
+                                <td>object picked up</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>item type</td>
+                            </tr>
+                            <tr>
+                                <td>itemnum</td>
+                                <td>item quantity</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>block coordinates</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Item.expend</td>
+                                <td rowspan="3">Part of this food item is consumed</td>
+                                <td>eventobjid</td>
+                                <td>event object</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>prop type</td>
+                            </tr>
+                            <tr>
+                                <td>itemnum</td>
+                                <td>prop quantity</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Missile.AreaIn</td>
+                                <td rowspan="4">Throwing objects into the area</td>
+                                <td>eventobjid</td>
+                                <td>event throw</td>
+                            </tr>
+                            <tr>
+                                <td>areaid</td>
+                                <td>area id</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>item type</td>
+                            </tr>
+                            <tr>
+                                <td>helperobjid</td>
+                                <td>object of the thrown object</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Missile.AreaOut</td>
+                                <td rowspan="4">Throwing objects leave the area</td>
+                                <td>eventobjid</td>
+                                <td>event throw</td>
+                            </tr>
+                            <tr>
+                                <td>areaid</td>
+                                <td>area id</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>item type</td>
+                            </tr>
+                            <tr>
+                                <td>helperobjid</td>
+                                <td>object of the thrown object</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Missile.Create</td>
+                                <td rowspan="4">Throwables are created</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>item type</td>
+                            </tr>
+                            <tr>
+                                <td>toobjid</td>
+                                <td>event throwable</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>block coordinates</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Particle.Item.OnCreate</td>
+                                <td rowspan="3">When the effect is created on the drop</td>
+                                <td>eventobjid</td>
+                                <td>event drop</td>
+                            </tr>
+                            <tr>
+                                <td>effectid</td>
+                                <td>special effect type</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>block position</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </figure>
                 <p>&nbsp;</p>
             </section>
             <section id="7">
                 <h1>Sự Kiện Hiệu Ứng</h1>
                 <figure>
-            <table>
-            <tbody>
-            <tr>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Tên</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Cách Sử Dụng</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Các Tham Số</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Mô Tả Tham Số</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Particle.Mob.OnCreate</td>
-            <td rowspan="3">Any creature's special effect is created</td>
-            <td>eventobjid</td>
-            <td >event creature</td>
-            </tr>
-            <tr>
-            <td>effectid</td>
-            <td >effect type</td>
-            </tr>
-            <tr>
-            <td>x,y,z</td>
-            <td >block location</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Particle.Player.OnCreate</td>
-            <td rowspan="3">Special effects are created on any player</td>
-            <td>eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td>effectid</td>
-            <td >effect type</td>
-            </tr>
-            <tr>
-            <td>x,y,z</td>
-            <td >block position</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Particle.Pos.OnCreate</td>
-            <td rowspan="2">Special effects are created at any position</td>
-            <td>effectid</td>
-            <td >effect type</td>
-            </tr>
-            <tr>
-            <td>x,y,z</td>
-            <td >block position</td>
-            </tr>
-            <tr>
-            <td rowspan="3">Particle.Projectile.OnCreate</td>
-            <td rowspan="3">Any projectile effects are created</td>
-            <td>eventobjid</td>
-            <td >event throw</td>
-            </tr>
-            <tr>
-            <td>effectid</td>
-            <td >effect type</td>
-            </tr>
-            <tr>
-            <td>x,y,z</td>
-            <td>block position</td>
-            </tr>
-            </tbody>
-            </table>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Tên</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Cách Sử Dụng</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Các Tham Số</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Mô Tả Tham Số</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Particle.Mob.OnCreate</td>
+                                <td rowspan="3">Any creature's special effect is created</td>
+                                <td>eventobjid</td>
+                                <td>event creature</td>
+                            </tr>
+                            <tr>
+                                <td>effectid</td>
+                                <td>effect type</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>block location</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Particle.Player.OnCreate</td>
+                                <td rowspan="3">Special effects are created on any player</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>effectid</td>
+                                <td>effect type</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>block position</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Particle.Pos.OnCreate</td>
+                                <td rowspan="2">Special effects are created at any position</td>
+                                <td>effectid</td>
+                                <td>effect type</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>block position</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Particle.Projectile.OnCreate</td>
+                                <td rowspan="3">Any projectile effects are created</td>
+                                <td>eventobjid</td>
+                                <td>event throw</td>
+                            </tr>
+                            <tr>
+                                <td>effectid</td>
+                                <td>effect type</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>block position</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </figure>
                 <p>&nbsp;</p>
             </section>
             <section id="8">
                 <h1>Sự Kiện UI</h1>
                 <figure>
-            <table>
-            <tbody>
-            <tr>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Tên</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Cách Sử Dụng</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Các Tham Số</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Mô Tả Tham Số</td>
-            </tr>
-            <tr>
-            <td rowspan="3">UI.Button.Click</td>
-            <td rowspan="3">Button Click</td>
-            <td>eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td>CustomUI</td>
-            <td >event ui</td>
-            </tr>
-            <tr>
-            <td>uielement</td>
-            <td >event component</td>
-            </tr>
-            <tr>
-            <td rowspan="3">UI.Button.TouchBegin</td>
-            <td rowspan="3">Button Press</td>
-            <td>eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td>CustomUI</td>
-            <td >event ui</td>
-            </tr>
-            <tr>
-            <td>uielement</td>
-            <td >&nbsp;</td>
-            </tr>
-            <tr>
-            <td rowspan="3">UI.GLoader3D.Click</td>
-            <td rowspan="3">The model of the current interface is released</td>
-            <td>eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td>CustomUI</td>
-            <td >event ui</td>
-            </tr>
-            <tr>
-            <td>uielement</td>
-            <td >event component</td>
-            </tr>
-            <tr>
-            <td rowspan="3">UI.GLoader3D.TouchBegin</td>
-            <td rowspan="3">The model of the current interface is pressed</td>
-            <td>eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td>CustomUI</td>
-            <td >event ui</td>
-            </tr>
-            <tr>
-            <td>uielement</td>
-            <td >event component</td>
-            </tr>
-            <tr>
-            <td rowspan="2">UI.Hide</td>
-            <td rowspan="2">The interface is closed</td>
-            <td>eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td>CustomUI</td>
-            <td >event ui</td>
-            </tr>
-            <tr>
-            <td rowspan="4">UI.LostFocus</td>
-            <td rowspan="4">Custom UI input box loses focus</td>
-            <td>eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td>CustomUI</td>
-            <td >event ui</td>
-            </tr>
-            <tr>
-            <td>uielement</td>
-            <td >event element</td>
-            </tr>
-            <tr>
-            <td>content</td>
-            <td >input content</td>
-            </tr>
-            <tr>
-            <td >UI.Show</td>
-            <td >The interface is opened</td>
-            <td>CustomUI</td>
-            <td>event ui</td>
-            </tr>
-            </tbody>
-            </table>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Tên</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Cách Sử Dụng</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Các Tham Số</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Mô Tả Tham Số</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">UI.Button.Click</td>
+                                <td rowspan="3">Button Click</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>CustomUI</td>
+                                <td>event ui</td>
+                            </tr>
+                            <tr>
+                                <td>uielement</td>
+                                <td>event component</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">UI.Button.TouchBegin</td>
+                                <td rowspan="3">Button Press</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>CustomUI</td>
+                                <td>event ui</td>
+                            </tr>
+                            <tr>
+                                <td>uielement</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">UI.GLoader3D.Click</td>
+                                <td rowspan="3">The model of the current interface is released</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>CustomUI</td>
+                                <td>event ui</td>
+                            </tr>
+                            <tr>
+                                <td>uielement</td>
+                                <td>event component</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">UI.GLoader3D.TouchBegin</td>
+                                <td rowspan="3">The model of the current interface is pressed</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>CustomUI</td>
+                                <td>event ui</td>
+                            </tr>
+                            <tr>
+                                <td>uielement</td>
+                                <td>event component</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">UI.Hide</td>
+                                <td rowspan="2">The interface is closed</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>CustomUI</td>
+                                <td>event ui</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">UI.LostFocus</td>
+                                <td rowspan="4">Custom UI input box loses focus</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>CustomUI</td>
+                                <td>event ui</td>
+                            </tr>
+                            <tr>
+                                <td>uielement</td>
+                                <td>event element</td>
+                            </tr>
+                            <tr>
+                                <td>content</td>
+                                <td>input content</td>
+                            </tr>
+                            <tr>
+                                <td>UI.Show</td>
+                                <td>The interface is opened</td>
+                                <td>CustomUI</td>
+                                <td>event ui</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </figure>
                 <p>&nbsp;</p>
             </section>
             <section id="9">
                 <h1>Các Sự Kiện Khác</h1>
                 <figure>
-            <table>
-            <tbody>
-            <tr>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Tên</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Cách Sử Dụng</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Các Tham Số</td>
-                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Mô Tả Tham Số</td>
-            </tr>
-            <tr>
-            <td >BluePrint.BuildBegin</td>
-            <td >Blueprint creation begins</td>
-            <td>areaid</td>
-            <td >region id</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Craft.end</td>
-            <td rowspan="4">Complete any recipe synthesis</td>
-            <td>eventobjid</td>
-            <td >event object</td>
-            </tr>
-            <tr>
-            <td>craftid</td>
-            <td >recipe id</td>
-            </tr>
-            <tr>
-            <td>itemid</td>
-            <td >item type</td>
-            </tr>
-            <tr>
-            <td>itemnum</td>
-            <td >item quantity</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Developer.BuyItem</td>
-            <td rowspan="2">Any player purchases or withdraws merchandise props</td>
-            <td>eventobjid</td>
-            <td>event object</td>
-            </tr>
-            <tr>
-            <td>itemid</td>
-            <td >prop type</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Furnace.begin</td>
-            <td rowspan="2">Any smelting starts</td>
-            <td>furanceid</td>
-            <td>smelting id</td>
-            </tr>
-            <tr>
-            <td>x,y,z</td>
-            <td >block location</td>
-            </tr>
-            <tr>
-            <td rowspan="2">Furnace.end</td>
-            <td rowspan="2">Any smelting ends</td>
-            <td>furanceid</td>
-            <td>smelting id</td>
-            </tr>
-            <tr>
-            <td>x,y,z</td>
-            <td >block location</td>
-            </tr>
-            <tr>
-            <td >MiNiVip_1</td>
-            <td >Buy a Mini Membership for 1 month</td>
-            <td>eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td >MiNiVip_3</td>
-            <td >Buy a 3-month Mini Membership</td>
-            <td>eventobjid</td>
-            <td >event player</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Plot.begin</td>
-            <td rowspan="4">Any scenario starts</td>
-            <td>eventobjid</td>
-            <td>event object</td>
-            </tr>
-            <tr>
-            <td>toobjid</td>
-            <td >target object</td>
-            </tr>
-            <tr>
-            <td>plotid</td>
-            <td >plot type</td>
-            </tr>
-            <tr>
-            <td>targetactorid</td>
-            <td >target creature type</td>
-            </tr>
-            <tr>
-            <td rowspan="4">Plot.end</td>
-            <td rowspan="4">Any plot ends</td>
-            <td>eventobjid</td>
-            <td>event object</td>
-            </tr>
-            <tr>
-            <td>toobjid</td>
-            <td >target object</td>
-            </tr>
-            <tr>
-            <td>plotid</td>
-            <td >plot type</td>
-            </tr>
-            <tr>
-            <td>targetactorid</td>
-            <td >target creature type</td>
-            </tr>
-            <tr>
-            <td rowspan="2">QQMusic.PlayBegin</td>
-            <td rowspan="2">QQ Music starts playing</td>
-            <td>eventobjid</td>
-            <td>event player</td>
-            </tr>
-            <tr>
-            <td>qqMusicId</td>
-            <td>music id</td>
-            </tr>
-            <tr>
-            <td rowspan="3">minitimer.change</td>
-            <td rowspan="3">Specifying timer changes</td>
-            <td>timerid</td>
-            <td>timer id</td>
-            </tr>
-            <tr>
-            <td>timername</td>
-            <td>timer name</td>
-            </tr>
-            <tr>
-            <td>timertime</td>
-            <td>timer time</td>
-            </tr>
-            </tbody>
-            </table>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Tên</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Cách Sử Dụng</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Các Tham Số</td>
+                                <td style="font-weight: bold;font-size: larger;color: #00ffff;">Mô Tả Tham Số</td>
+                            </tr>
+                            <tr>
+                                <td>BluePrint.BuildBegin</td>
+                                <td>Blueprint creation begins</td>
+                                <td>areaid</td>
+                                <td>region id</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Craft.end</td>
+                                <td rowspan="4">Complete any recipe synthesis</td>
+                                <td>eventobjid</td>
+                                <td>event object</td>
+                            </tr>
+                            <tr>
+                                <td>craftid</td>
+                                <td>recipe id</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>item type</td>
+                            </tr>
+                            <tr>
+                                <td>itemnum</td>
+                                <td>item quantity</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Developer.BuyItem</td>
+                                <td rowspan="2">Any player purchases or withdraws merchandise props</td>
+                                <td>eventobjid</td>
+                                <td>event object</td>
+                            </tr>
+                            <tr>
+                                <td>itemid</td>
+                                <td>prop type</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Furnace.begin</td>
+                                <td rowspan="2">Any smelting starts</td>
+                                <td>furanceid</td>
+                                <td>smelting id</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>block location</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Furnace.end</td>
+                                <td rowspan="2">Any smelting ends</td>
+                                <td>furanceid</td>
+                                <td>smelting id</td>
+                            </tr>
+                            <tr>
+                                <td>x,y,z</td>
+                                <td>block location</td>
+                            </tr>
+                            <tr>
+                                <td>MiNiVip_1</td>
+                                <td>Buy a Mini Membership for 1 month</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>MiNiVip_3</td>
+                                <td>Buy a 3-month Mini Membership</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Plot.begin</td>
+                                <td rowspan="4">Any scenario starts</td>
+                                <td>eventobjid</td>
+                                <td>event object</td>
+                            </tr>
+                            <tr>
+                                <td>toobjid</td>
+                                <td>target object</td>
+                            </tr>
+                            <tr>
+                                <td>plotid</td>
+                                <td>plot type</td>
+                            </tr>
+                            <tr>
+                                <td>targetactorid</td>
+                                <td>target creature type</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Plot.end</td>
+                                <td rowspan="4">Any plot ends</td>
+                                <td>eventobjid</td>
+                                <td>event object</td>
+                            </tr>
+                            <tr>
+                                <td>toobjid</td>
+                                <td>target object</td>
+                            </tr>
+                            <tr>
+                                <td>plotid</td>
+                                <td>plot type</td>
+                            </tr>
+                            <tr>
+                                <td>targetactorid</td>
+                                <td>target creature type</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">QQMusic.PlayBegin</td>
+                                <td rowspan="2">QQ Music starts playing</td>
+                                <td>eventobjid</td>
+                                <td>event player</td>
+                            </tr>
+                            <tr>
+                                <td>qqMusicId</td>
+                                <td>music id</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">minitimer.change</td>
+                                <td rowspan="3">Specifying timer changes</td>
+                                <td>timerid</td>
+                                <td>timer id</td>
+                            </tr>
+                            <tr>
+                                <td>timername</td>
+                                <td>timer name</td>
+                            </tr>
+                            <tr>
+                                <td>timertime</td>
+                                <td>timer time</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </figure>
                 <p>&nbsp;</p>
             </section>
         </div>
     </div>
     <script src="sidebar.js"></script>
-    <script src="copy.js"></scrip>
+    <script src="copy.js"></script>
     <script src="section.js"></script>
 </body>
 </html>
