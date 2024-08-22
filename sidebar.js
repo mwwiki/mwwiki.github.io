@@ -1,27 +1,15 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const toggleSidebarBtn = document.querySelector(".toggle-btn");
-    const sidebar = document.querySelector(".sidebar");
+let btn = document.querySelector(".fa-bars");
+let sidebar = document.querySelector(".sidebar");
 
-    function toggleSidebar() {
-        sidebar.classList.toggle("active");
-    }
-
-    toggleSidebarBtn.addEventListener("click", toggleSidebar);
-    
-    const menuTitle = document.querySelector('.menu-title');
-    const basicGuideTitle = document.querySelector('.sidebar-header:nth-child(2)');
-
-    menuTitle.addEventListener('click', (event) => {
-        event.stopPropagation();
-    });
-
-    basicGuideTitle.addEventListener('click', (event) => {
-        event.stopPropagation();
-    });
-
-    sidebar.addEventListener("click", () => {
-        sidebar.classList.toggle("collapsed");
-        const content = document.querySelector(".content");
-        content.classList.toggle("collapsed");
-    });
+btn.addEventListener("click", () => {
+  sidebar.classList.toggle("close");
 });
+
+let arrows = document.querySelectorAll(".arrow");
+for (var i = 0; i < arrows.length; i++) {
+  arrows[i].addEventListener("click", (e) => {
+    let arrowParent = e.target.parentElement.parentElement;
+
+    arrowParent.classList.toggle("show");
+  });
+}
