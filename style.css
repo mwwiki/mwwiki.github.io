@@ -201,42 +201,49 @@ th,td{
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 .sidebar {
-position: fixed;
-top: 0;
-left: 0;
-height: 100%;
-width: 300px;
-background-color: #11101d;
-z-index: 100;
-transition: all 0.5s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 300px;
+  background-color: #363638;
+  z-index: 100;
+  transition: all 0.5s ease;
 }
 
 .sidebar.close {
-width: 78px;
+  width: 78px;
 }
 
 .sidebar .logo {
-height: 60px;
-display: flex;
-width: 100%;
-align-items: center;
+  height: 60px;
+  display: grid;
+  width: 100%;
+  align-items: center;
 }
 
-.sidebar .logo i {
-font-size: 30px;
-color: #fff;
-height: 50px;
-min-width: 78px;
-text-align: center;
-line-height: 50px;
+.sidebar .logo .sidebarbtn {
+  font-size: 30px;
+  color: #fff;
+  height: 25px;
+  width: auto;
+  justify-self: center;
+  line-height: 50px;
+}
+.sidebar .nav-list .icon {
+  height: 20px;
+  padding-left: 20px;
+}
+.sidebar.close.nav-list.icon {
+  justify-self: center;
 }
 
 .sidebar .logo .logo-name {
-font-size: 22px;
-color: #fff;
-font-weight: 600;
-transition: all 0.3s ease;
-transition-delay: 0.1s;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
 }
 
 .sidebar.close .logo .logo-name {
@@ -308,6 +315,9 @@ color: #fff;
 font-size: 15px;
 font-weight: bold;
 transition: all 0.4s ease;
+padding-left: 20px;
+padding-top: 10px;
+padding-bottom: 10px;
 }
 
 .sidebar.close .nav-list li a .link-name {
@@ -360,7 +370,7 @@ transition: all 0.4s ease;
   white-space: wrap; /* Prevent text from wrapping */
   text-overflow: ellipsis; /* Add ellipsis for overflowed text */
   display: block; /* Ensure block display for padding and text overflow */
-  width: 200px;
+  width: 300px;
 }
 
 
@@ -388,40 +398,19 @@ pointer-events: none;
 top: 50%;
 transform: translateY(-50%);
 }
-
-.home-section {
-position: relative;
-height: 100vh;
-width: calc(100% - 260px);
-left: 260px;
-background-color: #e4e9f7;
-transition: all 0.5s ease;
+.home-content{
+  text-align: center;
+  padding-top: 20px;
+  font-size: 30px;
 }
-
-.sidebar.close ~ .home-section {
-left: 78px;
-width: calc(100% - 78px);
+.sidebar.home-content{
+  padding-top: 20px;
+  font-size: 30px;
+  transition: none;
 }
-
-.home-section .home-content {
-display: flex;
-height: 60px;
-align-items: center;
+.sidebar.close .menu-text{
+  display: none;
 }
-
-.home-section .home-content i,
-.home-section .home-content .text {
-color: #11101d;
-font-size: 35px;
-}
-
-.home-section .home-content i {
-margin: 0 15px;
-cursor: pointer;
-}
-
-.home-section .home-content .text {
-white-space: nowrap;
-font-size: 20px;
-font-weight: 600;
+.sidebar .menu-text{
+  display:initial;
 }
