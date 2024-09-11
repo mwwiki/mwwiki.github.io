@@ -188,15 +188,32 @@ a{
   text-decoration: none;
 }
 table,th,td{
-  border: 3px solid #fff261;
-  border-collapse: collapse
+  border: 1.5px solid #fff261;
+  border-collapse: collapse;
+  padding:10px;
+}
+table{
+  outline: 2px solid #fff261;
+  padding-right: 10px;
 }
 th,td{
   padding: 10px;
-  text-align: left;
 }
+.header-cell {
+  font-weight: bold;
+  font-size: larger;
+  text-align: center;
+}
+table td:first-child, table th:first-child {
+  text-align: center;
+}
+
 .th1{
   text-align: center;
+}
+
+content{
+  padding-right: 10px
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
