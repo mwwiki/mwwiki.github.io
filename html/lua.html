@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <button class="toggle-btn">☰</button>
+                <h2 class="menu-title">Menu</h2>
+            </div>
+            <h3 class="sidebar-header">Hướng Dẫn Cơ Bản</h3>
+            <ul class="sidebar-list">
+                <li><a href="scriptaccess.html">Cách Truy Cập Script</a></li>
+                <li><a href="editscript.html">Cách Chỉnh Sửa Kịch Bản</a></li>
+            </ul>
+            <h3 class="sidebar-header">Giới Thiệu</h3>
+            <ul class="sidebar-list">
+                <li><a href="lua.html">LUA Là Gì</a></li>
+                <li><a href="caseandexplain.html">Những Ví Dụ Cơ Bản Và Giải Thích</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>Giới thiệu về Lua Programming</h1>
+            <h2>Lua là gì?</h2>
+            <p>Lua là một ngôn ngữ lập trình kịch bản nhẹ, được thiết kế để dễ học và sử dụng. Nó được tạo ra bởi
+                Roberto Ierusalimschy, Luiz Henrique de Figueiredo và Waldemar Celes ở PUC-Rio (Pontifícia Universidade
+                Católica do Rio de Janeiro) ở Brazil vào năm 1993.</p>
+
+            <p>Lua được sử dụng rộng rãi trong nhiều lĩnh vực như:</p>
+            <ul>
+                <li><strong>Game Development:</strong> Lua được sử dụng trong các engine game nổi tiếng như Unity,
+                    Roblox, Mini World và CryEngine.</li>
+                <li><strong>Embedding:</strong> Lua có thể được nhúng vào các ứng dụng khác để thêm tính năng kịch bản
+                    và tùy chỉnh.</li>
+                <li><strong>Web Development:</strong> Lua được sử dụng trong các framework web như OpenResty và ngx_lua.
+                </li>
+                <li><strong>Scripting:</strong> Lua là một lựa chọn tốt cho scripting trong các ứng dụng như ứng dụng
+                    desktop, hệ thống tự động hóa, và nhiều lĩnh vực khác.</li>
+            </ul>
+
+            <h2>Cú pháp cơ bản của Lua</h2>
+            <p>Cú pháp của Lua rất đơn giản và trực quan.</p>
+            <ul>
+                <li><strong>Bắt đầu:</strong> Mã Lua được viết trong các file có đuôi là <code
+                        class="keyword">.lua</code>.</li>
+                <li><strong>Kết thúc dòng:</strong> Dòng lệnh kết thúc bằng dấu chấm phẩy <span class="keyword">;</span>
+                    hoặc dấu cách trắng.</li>
+                <li><strong>Bình luận:</strong> Sử dụng <span class="comment">--</span> để viết bình luận.</li>
+                <li><strong>Phạm vi:</strong> Không có khối lệnh, phạm vi được xác định bởi các từ khóa <code
+                        class="keyword">do...end</code>, <span class="keyword">if...then...end</span>, <code
+                        class="keyword">while...do...end</code>, <span class="keyword">for...do...end</span>, <code
+                        class="keyword">function...end</code>.</li>
+                <li><strong>Các lệnh:</strong> Mỗi lệnh được viết trên một dòng riêng biệt hoặc được ngăn cách bởi dấu
+                    chấm phẩy <span class="keyword">;</span>.</li>
+                <li><strong>Khởi tạo biến:</strong> Không cần khai báo kiểu dữ liệu cho biến.</li>
+            </ul>
+
+            <h3>Ví dụ:</h3>
+            <div class="code-block">
+                <pre><code><span class="comment">-- In ra màn hình "Hello, World!"</span>
+<span class="function">print</span>(<span class="string">"Hello, World!"</span>)
+
+<span class="comment">-- Gán giá trị cho biến</span>
+<span class="keyword">local</span> <span class="variable">myVariable</span> = <span class="value">10</span>
+<span class="function">print</span>(<span class="variable">myVariable</span>)
+
+<span class="comment">-- Tính toán và in ra kết quả</span>
+<span class="keyword">local</span> <span class="variable">sum</span> = <span class="value">10</span> + <span class="value">20</span>
+<span class="function">print</span>(<span class="variable">sum</span>)</code></pre>
+            </div>
+            <h2>Các Loại Dữ Liệu Của Lua</h2>
+            <p>Lua có 8 loại dữ liệu cơ bản:</p>
+            <ol>
+                <li><strong>nil:</strong> Đại diện cho giá trị không xác định.</li>
+                <li><strong>boolean:</strong> Có hai giá trị là <span class="value">true</span> và <code
+                        class="value">false</code>.</li>
+                <li><strong>number:</strong> Số thập phân, có thể là số nguyên hoặc số thực.</li>
+                <li><strong>string:</strong> Chuỗi ký tự được bao quanh bởi dấu nháy kép <span class="string">"</span>.
+                </li>
+                <li><strong>function:</strong> Hàm được định nghĩa bởi người dùng.</li>
+                <li><strong>userdata:</strong> Dữ liệu tùy chỉnh, cho phép truy cập vào bộ nhớ C.</li>
+                <li><strong>thread:</strong> Đại diện cho một luồng thực thi riêng biệt.</li>
+                <li><strong>table:</strong> Một cấu trúc dữ liệu liên kết, tương tự như một mảng kết hợp trong các ngôn
+                    ngữ khác.</li>
+            </ol>
+
+            <h3>Ví dụ:</h3>
+            <div class="code-block">
+                <pre><code>
+<span class="keyword">local</span> nilValue = <span class="keyword">nil</span>
+<span class="keyword">local</span> isTrue = <span class="value">true</span>
+<span class="keyword">local</span> numberValue = <span class="value">10.5</span>
+<span class="keyword">local</span> stringValue = <span class="string">"Hello, Lua!"</span>
+
+<span class="comment">-- Tạo một hàm</span>
+<span class="keyword">local</span> <span class="function">function</span> sayHello()
+    <span class="function">print</span>(<span class="string">"Hello from Lua!"</span>)
+<span class="keyword">end</span>
+                    
+<span class="comment">-- Gọi hàm</span>
+    sayHello()
+                    
+<span class="comment">-- Tạo một bảng</span>
+<span class="keyword">local</span> myTable = {
+    name = <span class="string">"John Doe"</span>,
+    age = <span class="value">30</span>,
+    city = <span class="string">"New York"</span>
+}
+            
+<span class="comment">-- Truy cập các phần tử trong bảng</span>
+<span class="function">print</span>(myTable.name) <span class="comment">-- In ra "John Doe"</span>
+<span class="function">print</span>(myTable[<span class="string">"age"</span>]) <span class="comment">-- In ra 30</span></code></pre>
+            </div>
+
+            <h2>Biến Của Lua</h2>
+            <p>Trong Lua, bạn không cần khai báo kiểu dữ liệu cho biến. Biến được tạo ra khi bạn gán giá trị cho chúng.
+            </p>
+
+            <h3>Ví dụ:</h3>
+            <div class="code-block"><pre><code><span class="keyword">local</span> myVariable = <span class="value">10</span>  <span class="comment">-- Khai báo biến myVariable và gán giá trị là 10</span>
+myVariable = <span class="string">"Hello"</span> <span class="comment">-- Gán giá trị mới cho biến myVariable</span>
+<span class="function">print</span>(myVariable)  <span class="comment">-- In ra "Hello"</span></code></pre></div>
+
+            <h2>Cấu Trúc Lặp Của Lua</h2>
+            <p>Lua cung cấp các câu lệnh lặp để lặp lại mã nhiều lần.</p>
+
+            <h3>for loop:</h3>
+            <div class="code-block"><pre><code><span class="keyword">for</span> i = <span class="value">1</span>, <span class="value">10</span> <span class="keyword">do</span> <span class="comment">-- Lặp 10 lần</span>
+    <span class="function">print</span>(i) 
+<span class="keyword">end</span></code></pre></div>
+
+            <h3>while loop:</h3>
+            <div class="code-block"><pre><code><span class="keyword">local</span> i = <span class="value">1</span>
+<span class="keyword">while</span> i <= <span class="value">10</span> <span class="keyword">do</span> <span class="comment">-- Lặp khi i nhỏ hơn hoặc bằng 10</span>
+    <span class="function">print</span>(i)
+    i = i + <span class="value">1</span>
+<span class="keyword">end</span></code></pre></div>
+            <h3>repeat...until loop:</h3>
+            <div class="code-block"><pre><code><span class="keyword">local</span> i = <span class="value">1</span>
+<span class="keyword">repeat</span> 
+    <span class="function">print</span>(i)
+    i = i + <span class="value">1</span>
+<span class="keyword">until</span> i > <span class="value">10</span> <span class="comment">-- Lặp đến khi i lớn hơn 10</span></code></pre></div>
+
+            <h2>Cấu Trúc Điều Khiển Của Lua</h2>
+            <p>Lua cung cấp các câu lệnh điều khiển luồng để điều khiển dòng thực thi của chương trình.</p>
+
+            <h3>if...then...else...end:</h3>
+            <div class="code-block"><pre><code><span class="keyword">local</span> age = <span class="value">20</span>
+
+<span class="keyword">if</span> age >= <span class="value">18</span> <span class="keyword">then</span>
+    <span class="function">print</span>(<span class="string">"Bạn đủ tuổi để lái xe"</span>)
+<span class="keyword">else</span>
+    <span class="function">print</span>(<span class="string">"Bạn chưa đủ tuổi để lái xe"</span>)
+<span class="keyword">end</span></code></pre></div>
+            <h3>hoặc:</h3>
+            <div class="code-block"><pre><code><span class="keyword">local</span> grade = <span class="value">80</span>
+    
+<span class="keyword">if</span> grade >= <span class="value">90</span> <span class="keyword">then</span>
+    <span class="function">print</span>(<span class="string">"Xuất sắc"</span>)
+<span class="keyword">elseif</span> grade >= <span class="value">80</span> <span class="keyword">then</span>
+    <span class="function">print</span>(<span class="string">"Giỏi"</span>)
+<span class="keyword">elseif</span> grade >= <span class="value">70</span> <span class="keyword">then</span>
+    <span class="function">print</span>(<span class="string">"Khá"</span>)
+<span class="keyword">else</span>
+    <span class="function">print</span>(<span class="string">"Trung bình"</span>)
+<span class="keyword">end</span></code></pre></div>
+
+            <h2>Hàm Của Lua</h2>
+            <p>Hàm là một khối mã có thể được gọi lại nhiều lần. Hàm có thể nhận tham số đầu vào và trả về giá trị.</p>
+
+            <h3>Ví dụ:</h3>
+            <div class="code-block">
+                <pre><code>
+    <span class="comment">-- Định nghĩa hàm</span>
+<span class="keyword">local</span> <span class="function">function</span> addNumbers(a, b)
+    <span class="keyword">return</span> a + b
+<span class="keyword">end</span>
+
+<span class="comment">-- Gọi hàm và in ra kết quả</span>
+<span class="keyword">local</span> sum = addNumbers(<span class="value">10</span>, <span class="value">20</span>)
+<span class="function">print</span>(sum) <span class="comment">-- In ra 30</span>
+            </code></pre>
+            </div>
+
+            <h2>Toán Tử Của Lua</h2>
+            <p>Lua cung cấp các toán tử để thực hiện các phép tính khác nhau.</p>
+            <ul>
+                <li><strong>Toán tử số học:</strong> <span class="keyword">+</span>, <span class="keyword">-</span>,
+                    <span class="keyword">*</span>, <span class="keyword">/</span>, <span class="keyword">%</span>,
+                    <span class="keyword">^</span></li>
+                <li><strong>Toán tử so sánh:</strong> <span class="keyword">==</span>, <span class="keyword">~=</span>,
+                    <span class="keyword"><</code>, <span class="keyword">></span>, <span class="keyword"><=</code>,
+                    <span class="keyword">>=</span></li>
+                <li><strong>Toán tử logic:</strong> <span class="keyword">and</span>, <span class="keyword">or</span>,
+                    <span class="keyword">not</span></li>
+                <li><strong>Toán tử gán:</strong> <span class="keyword">=</span>, <span class="keyword">+=</span>, <code
+                        class="keyword">-=</code>, <span class="keyword">*=</span>, <span class="keyword">/=</span>,
+                    <span class="keyword">%=</span>, <span class="keyword">^</span>=</li>
+                <li><strong>Toán tử nối chuỗi:</strong> <span class="keyword">..</span></li>
+            </ul>
+
+            <h3>Ví dụ:</h3>
+            <div class="code-block">
+                <pre><code>
+<span class="keyword">local</span> a = <span class="value">10</span>
+<span class="keyword">local</span> b = <span class="value">20</span>
+
+<span class="keyword">local</span> sum = a + b  <span class="comment">-- Tính tổng</span>
+<span class="keyword">local</span> difference = a - b <span class="comment">-- Tính hiệu</span>
+<span class="keyword">local</span> product = a * b <span class="comment">-- Tính tích</span>
+
+<span class="comment">-- So sánh
+<span class="keyword">if</span><span class="api"> a == b </span><span class="keyword">then</span> 
+    <span class="function">print</span>(<span class="string">"a bằng b"</span>)
+<span class="keyword">end</span>
+        
+-- Nối chuỗi
+<span class="keyword">local</span><span class="api"> message = </span><span class="string">"Hello, "</span> .. <span class="string">"World!"</span>
+<span class="function">print</span><span class="api">(message)</span>
+</code></pre>
+            </div>
+
+            <h2>Chuỗi Của Lua</h2>
+            <p>Chuỗi là một chuỗi ký tự được bao quanh bởi dấu nháy kép <span class="string">"</span>. Lua cung cấp các
+                hàm để thao tác với chuỗi.</p>
+
+            <h3>Ví dụ:</h3>
+            <div class="code-block">
+                <pre><code>
+<span class="keyword">local</span> myString = <span class="string">"Hello, Lua!"</span>
+
+-- Độ dài chuỗi
+<span class="function">print</span>(#myString) <span class="comment">-- In ra 13</span>
+
+-- Truy cập ký tự
+<span class="function">print</span>(myString:sub(<span class="value">1</span>, <span class="value">5</span>)) <span class="comment">-- In ra "Hello"</span>
+
+-- Chuyển đổi chữ hoa/thường
+<span class="function">print</span>(myString:upper()) <span class="comment">-- In ra "HELLO, LUA!"</span>
+<span class="function">print</span>(myString:lower()) <span class="comment">-- In ra "hello, lua!"</span>
+
+-- Thay thế ký tự
+<span class="function">print</span>(myString:gsub(<span class="string">"Lua"</span>, <span class="string">"World"</span>)) <span class="comment">-- In ra "Hello, World!"</span>
+            </code></pre>
+            </div>
+
+            <h2>Mảng Dữ Liệu Của Lua</h2>
+            <p>Lua không có kiểu dữ liệu mảng riêng biệt. Mảng được biểu diễn bằng bảng với các chỉ mục số.</p>
+
+            <h3>Ví dụ:</h3>
+            <div class="code-block">
+                <pre><code>
+<span class="keyword">local</span> myArray = {<span class="string">"Apple"</span>, <span class="string">"Banana"</span>, <span class="string">"Orange"</span>}
+
+-- Truy cập phần tử
+<span class="function">print</span>(myArray[<span class="value">1</span>]) <span class="comment">-- In ra "Apple"</span>
+
+-- Thêm phần tử
+table.insert(myArray, <span class="string">"Grape"</span>) 
+
+-- Xóa phần tử
+table.remove(myArray, <span class="value">2</span>) 
+
+-- Lặp qua mảng
+<span class="keyword">for</span> i, v <span class="keyword">in</span> ipairs(myArray) <span class="keyword">do</span>
+    <span class="function">print</span>(i, v)
+<span class="keyword">end</span>
+            </code></pre>
+            </div>
+
+            <h2>Bảng Của Lua</h2>
+            <p>Bảng là một cấu trúc dữ liệu liên kết, tương tự như một mảng kết hợp trong các ngôn ngữ khác. Bảng có thể
+                chứa các giá trị khác nhau với các khóa khác nhau.</p>
+
+            <h3>Ví dụ:</h3>
+            <div class="code-block"><pre><code><span class="keyword">local</span> myTable = {
+    name = <span class="string">"John Doe"</span>,
+    age = <span class="value">30</span>,
+    city = <span class="string">"New York"</span>,
+    hobbies = {<span class="string">"Reading"</span>, <span class="string">"Gaming"</span>}
+}
+
+<span class="comment">-- Truy cập giá trị</span>
+<span class="function">print</span>(myTable.name) <span class="comment">-- In ra "John Doe"</span>
+<span class="function">print</span>(myTable[<span class="string">"age"</span>]) <span class="comment">-- In ra 30</span>
+<span class="function">print</span>(myTable.hobbies[<span class="value">1</span>]) <span class="comment">-- In ra "Reading"</span>
+
+-- Thêm phần tử
+myTable.email = <span class="string">"john.doe@example.com"</span>
+
+-- Lặp qua bảng
+<span class="keyword">for</span> k, v <span class="keyword">in</span> pairs(myTable) <span class="keyword">do</span>
+    <span class="function">print</span>(k, v)
+<span class="keyword">end</span></code></pre>
+            </div>
+            <h2>Để Biết Thêm Về Lua Hãy Vào Trang Web Chính Thức <a
+                    href="https://www.lua.org/pil/contents.html#P1">Lua</a></h2>
+            </section>
+
+
+            <script src="sidebar.js"></script>
+            <script src="copy.js"></script>
+</body>
+
+</html>

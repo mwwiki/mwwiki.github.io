@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keyword" content="miniworld,MiniWorld,MW,mw,mwwiki,MWWIKI,mwapi,MWAPI,MWAPIWIKI">
     <title>HOME</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -112,7 +112,7 @@
                 ví dụ sau</p>
             <div class="code-block">
                 <pre><code><span><span class="keyword">local</span> GameRule = class.GameRule.new()</span>
-<span class="keyword">local</span><span class="function"> function</span>InitGameRule()
+<span class="keyword">local</span><span class="function"> function</span> InitGameRule()
     GameRule.EndTime = <span class="variable">6</span><span class="comment">    --Thời Gian Trò Chơi</span>
     GameRule.TeamNum = <span class="variable">2</span><span class="comment">    --Số Đội</span>
     GameRule.MaxPlayers = <span class="variable">6</span><span class="comment">    --Số Lượng Người Chơi Tối Đa</span>
@@ -135,496 +135,545 @@
                 <table>
                     <tbody>
                         <tr>
-                            <td class="header-cell">
-                                STT
-                            </td>
-                            <td class="header-cell">
-                                Tên
-                            </td>
-                            <td class="header-cell">
-                                Mô Tả
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
                             <td>
-                                1
+                                <p>STT</p>
                             </td>
                             <td>
-                                GameRule.CurTime
+                                <p>Tên</p>
                             </td>
                             <td>
-                                Lấy / Đặt thời gian hiện tại
+                                <p>Mô Tả</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                2
+                                <p>1</p>
                             </td>
                             <td>
-                                GameRule.TimeLocked
+                                <div class="code-block">
+                                    <pre><code>GameRule.CurTime</pre></code>
                             </td>
                             <td>
-                                Khóa thời gian
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                3
-                            </td>
-                            <td>
-                                GameRule.Weather
-                            </td>
-                            <td>
-                                Thời tiết 0:Mưa 1:Nắng
+                                <p>Lấy / Đặt thời gian hiện tại</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                4
+                                <p>2</p>
                             </td>
                             <td>
-                                GameRule.MaxPlayers
+                                <div class="code-block">
+                                    <pre><code>GameRule.TimeLocked</pre></code>
                             </td>
                             <td>
-                                Số lượng người chơi tối đa
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                5
-                            </td>
-                            <td>
-                                GameRule.BlockDestroy
-                            </td>
-                            <td>
-                                Có thể phá khối (0: Không, 1: Có)
+                                <p>Khóa thời gian</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                6
+                                <p>3</p>
                             </td>
                             <td>
-                                GameRule.BlockPlace
+                                <div class="code-block">
+                                    <pre><code>GameRule.Weather</pre></code>
                             </td>
                             <td>
-                                Có thể đặt khối (0: Không, 1: Có)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                7
-                            </td>
-                            <td>
-                                GameRule.BlockUse
-                            </td>
-                            <td>
-                                Có thể sử dụng khối (0: Không, 1: Có)
+                                <p>Thời tiết 0:Mưa 1:Nắng</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                8
+                                <p>4</p>
                             </td>
                             <td>
-                                GameRule.GravityFactor
+                
+                                <div class="code-block">
+                                    <pre><code>GameRule.MaxPlayers</pre></code>
                             </td>
                             <td>
-                                Trọng lực (0.1 → 10)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                9
-                            </td>
-                            <td>
-                                GameRule.CameraDir
-                            </td>
-                            <td>
-                                Góc nhìn của người chơi : 0/1/2: Góc nhìn mặc định / Góc nhìn phía trước / Góc nhìn phía
-                                sau , 3/4/5/6: Khóa góc nhìn mặc định / Khóa góc nhìn trước / Khóa góc nhìn sau / Khóa
-                                góc nhìn trên </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                10
-                            </td>
-                            <td>
-                                GameRule.StartMode
-                            </td>
-                            <td>
-                                Chế độ bắt đầu 0: Chủ phòng tự bắt đầu 1: Tự động
+                                <p>Số lượng người chơi tối đa</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                11
+                                <p>5</p>
                             </td>
                             <td>
-                                GameRule.StartPlayers
+                                <div class="code-block">
+                                    <pre><code>GameRule.BlockDestroy</pre></code>
                             </td>
                             <td>
-                                Số lượng người chơi tối thiểu để bắt đầu
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                12
-                            </td>
-                            <td>
-                                GameRule.TeamNum
-                            </td>
-                            <td>
-                                Số lượng đội
+                                <p>Có thể phá khối (0: Không, 1: Có)</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                13
+                                <p>6</p>
                             </td>
                             <td>
-                                GameRule.AttackPlayerMode
+                                <p>
+                                <div class="code-block">
+                                    <pre><code>GameRule.BlockPlace</pre></code>
                             </td>
                             <td>
-                                Chế độ tấn công của người chơi (0: Chỉ tấn công khác đội, 1: Cấm tấn công, 2: Tấn công
-                                tự do)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                14
-                            </td>
-                            <td>
-                                GameRule.EndTime
-                            </td>
-                            <td>
-                                Thời gian game (0:Không giới hạn, 1 → 60: Kéo dài từ 1 → 60 phút)
+                                <p>Có thể đặt khối (0: Không, 1: Có)</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                15
+                                <p>7</p>
                             </td>
                             <td>
-                                GameRule.EndScore
+                                <div class="code-block">
+                                    <pre><code>GameRule.BlockUse</pre></code>
                             </td>
                             <td>
-                                Điểm để chiến thắng (0: không giới hạn, 1-999: đạt từ 1 tới 999 để thắng)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                16
-                            </td>
-                            <td>
-                                GameRule.ScoreKillPlayer
-                            </td>
-                            <td>
-                                Số điểm nhận được khi hạ người chơi
+                                <p>Có thể sử dụng khối (0: Không, 1: Có)</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                17
+                                <p>8</p>
                             </td>
                             <td>
-                                GameRule.ScoreKillMob
+                
+                                <div class="code-block">
+                                    <pre><code>GameRule.GravityFactor</pre></code>
                             </td>
                             <td>
-                                Số điểm nhận được khi hạ sinh vật
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                18
-                            </td>
-                            <td>
-                                GameRule.ScoreCollectStar
-                            </td>
-                            <td>
-                                Số điểm nhận được khi thu thập sao
+                                <p>Trọng lực (0.1 → 10)</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                19
+                                <p>9</p>
                             </td>
                             <td>
-                                GameRule.ReviveMode
+                                <div class="code-block">
+                                    <pre><code>GameRule.CameraDir</pre></code>
                             </td>
                             <td>
-                                Chế độ hồi sinh (0: mặc định, 1-320: tự hồi sinh sau 1 tới 320 giây sau khi bị hạ gục)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                20
-                            </td>
-                            <td>
-                                GameRule.ReviveInvulnerable
-                            </td>
-                            <td>
-                                Bảo vệ hồi sinh (0: Để cài mặc định bảo vệ 5 giây sau khi hồi sinh, 1 → 99: Thời gian
-                                bảo vệ hồi sinh từ 1 → 99 giây)
+                                <p>Góc nhìn của người chơi : 0/1/2: Góc nhìn mặc định / Góc
+                                    nhìn phía trước / Góc nhìn phía sau , 3/4/5/6: Khóa
+                                    góc nhìn mặc định / Khóa góc nhìn trước / Khóa góc
+                                    nhìn sau / Khóa góc nhìn trên</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                21
+                                <p>10</p>
                             </td>
                             <td>
-                                GameRule.DisplayName
+                                <div class="code-block">
+                                    <pre><code>GameRule.StartMode</pre></code>
                             </td>
                             <td>
-                                Hiển thị tên (0: Hiển thị với mọi người, 1: Chỉ hiển thị với cùng đội, 2: Chỉ hiển thị
-                                với đội địch, 3: Ẩn với tất cả)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                22
-                            </td>
-                            <td>
-                                GameRule.WinLoseEndTime
-                            </td>
-                            <td>
-                                Kết thúc trò chơi (0: Đội có điểm cao nhất, 1: Chiến thắng khi hết giờ, 2: Thua khi hết
-                                giờ)
+                                <p>Chế độ bắt đầu 0: Chủ phòng tự bắt đầu 1: Tự động</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                23
+                                <p>11</p>
                             </td>
                             <td>
-                                GameRule.SaveMode
+                                <div class="code-block">
+                                    <pre><code>GameRule.StartPlayers</pre></code>
                             </td>
                             <td>
-                                Lưu game (0: Có, 1: Không)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                24
-                            </td>
-                            <td>
-                                GameRule.KillNotify
-                            </td>
-                            <td>
-                                Thông báo hạ gục (0: không, 1: có)
+                                <p>Số lượng người chơi tối thiểu để bắt đầu</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                25
+                                <p>12</p>
                             </td>
                             <td>
-                                GameRule.BgMusicMode
+                                <div class="code-block">
+                                    <pre><code>GameRule.TeamNum</pre></code>
                             </td>
                             <td>
-                                Nhạc nền (-1: Không nhạc, 0: Mặc định, 1-8: Nhạc tương ứng)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                26
-                            </td>
-                            <td>
-                                GameRule.MobGen
-                            </td>
-                            <td>
-                                Tạo sinh vật (-1: Chỉ tạo khi trò chơi được bắt đầu , 0: Không tạo sinh vật, 1: Tạo sinh
-                                vật)
+                                <p>Số lượng đội</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                27
+                                <p>13</p>
                             </td>
                             <td>
-                                GameRule.SpawnPtMode
+                                <div class="code-block">
+                                    <pre><code>GameRule.AttackPlayerMode</pre></code>
                             </td>
                             <td>
-                                Điểm hồi sinh đội (0: điểm hồi sinh đội ngẫu nhiên, 1: điểm hồi sinh đội gần nhất)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                28
-                            </td>
-                            <td>
-                                GameRule.MinimapTeams
-                            </td>
-                            <td>
-                                Hiển thị vị trí trên bản đồ (0: Hiển thị với đội khác, 1: không hiển thị với đội khác)
+                                <p>Chế độ tấn công của người chơi (0: Chỉ tấn công khác đội, 1: Cấm tấn công,
+                                    2: Tấn công tự do)</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                29
+                                <p>14</p>
                             </td>
                             <td>
-                                GameRule.PlayerDieDrops
+                                <div class="code-block">
+                                    <pre><code>GameRule.EndTime</pre></code>
                             </td>
                             <td>
-                                Mất vật phẩm khi bị tiêu diệt (0: rớt bình thường, 1: xóa vật phẩm trong túi, 2: giữ vật
-                                phẩm, 3: rớt toàn bộ)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                30
-                            </td>
-                            <td>
-                                GameRule.DisplayScore
-                            </td>
-                            <td>
-                                Hiển thị điểm và thời gian (0: Không, 1: Có)
+                                <p>Thời gian game (0:Không giới hạn, 1 → 60: Kéo dài từ 1 → 60
+                                    phút)</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                31
+                                <p>15</p>
                             </td>
                             <td>
-                                GameRule.LifeNum
+                                <div class="code-block">
+                                    <pre><code>GameRule.EndScore</pre></code>
                             </td>
                             <td>
-                                Số mạng (0: Không giới hạn, 1 → 99: 1 → 99 mạng)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                32
-                            </td>
-                            <td>
-                                GameRule.ShowSight
-                            </td>
-                            <td>
-                                Hiển thị tâm chuẩn (0: Không, 1: Có)
+                                <p>Điểm để chiến thắng (0: không giới hạn, 1-999: đạt từ 1 tới 999 để thắng)</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                33
+                                <p>16</p>
                             </td>
                             <td>
-                                GameRule.ScoreColorChange
+                                <div class="code-block">
+                                    <pre><code>GameRule.ScoreKillPlayer</pre></code>
                             </td>
                             <td>
-                                Số điểm nhận được khi nhuộm màu
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                34
-                            </td>
-                            <td>
-                                GameRule.GPoisonSwitch
-                            </td>
-                            <td>
-                                Có bật khu ô nhiễm (0: không, 1: có)
+                                <p>Số điểm nhận được khi hạ người chơi</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                35
+                                <p>17</p>
                             </td>
                             <td>
-                                GameRule.GPoisonSafeD0
+                                <div class="code-block">
+                                    <pre><code>GameRule.ScoreKillMob</pre></code>
                             </td>
                             <td>
-                                Bán kính khu an toàn ban đầu (từ 1 tới 99 khối)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                36
-                            </td>
-                            <td>
-                                GameRule.GPoisonSafeT0
-                            </td>
-                            <td>
-                                Thời gian khu an toàn ban đầu (từ 1 tới 600 giây)
+                                <p>Số điểm nhận được khi hạ sinh vật</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                37
+                                <p>18</p>
                             </td>
                             <td>
-                                GameRule.AllowMidwayJoin
+                                <div class="code-block">
+                                    <pre><code>GameRule.ScoreCollectStar</pre></code>
                             </td>
                             <td>
-                                Cho phép vào giữa trận (0: không, 1: có)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                38
-                            </td>
-                            <td>
-                                GameRule.LifeNumTeamShare
-                            </td>
-                            <td>
-                                Chia sẻ mạng cùng đội (0: không, 1: có)
+                                <p>Số điểm nhận được khi thu thập sao</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                39
+                                <p>19</p>
                             </td>
                             <td>
-                                GameRule.ViewMode
+                                <div class="code-block">
+                                    <pre><code>GameRule.ReviveMode</pre></code>
                             </td>
                             <td>
-                                Bật chế độ theo dõi (0: không, 1: có)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                40
-                            </td>
-                            <td>
-                                GameRule.ViewType
-                            </td>
-                            <td>
-                                Chế độ theo dõi (0: tự do, 1: theo màn hình, 2: có thể thay đổi)
+                                <p>Chế độ hồi sinh (0: mặc định, 1-320: tự hồi sinh sau 1 tới 320 giâmy sau khi bị hạ gục)</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                41
+                                <p>20</p>
                             </td>
                             <td>
-                                GameRule.CountDown
+                                <div class="code-block">
+                                    <pre><code>GameRule.ReviveInvulnerable</pre></code>
                             </td>
                             <td>
-                                Đếm ngược bắt đầu trò chơi (từ 1 tới 100 giây)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                42
-                            </td>
-                            <td>
-                                GameRule.ScoreResetRound
-                            </td>
-                            <td>
-                                Khởi động lại dữ liệu mỗi hiệp (0: không, 1: có)
+                                <p>Bảo vệ hồi sinh (0: Để cài mặc định bảo vệ 5 giâmy sau khi hồi sinh, 1 → 99: Thời
+                                    gian bảo vệ hồi sinh từ 1 → 99 giâmy)</p>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                43
+                                <p>21</p>
                             </td>
                             <td>
-                                GameRule.ResetScore
+                                <div class="code-block">
+                                    <pre><code>GameRule.DisplayName</pre></code>
                             </td>
                             <td>
-                                Khởi động lại dữ liệu khi đạt từ 1 tới 100 điểm
+                                <p>Hiển thị tên (0: Hiển thị với mọi người, 1: Chỉ hiển thị với cùng đội, 2: Chỉ hiển thị
+                                    với đội địch, 3: Ẩn với tất cả)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>22</p>
+                            </td>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>GameRule.WinLoseEndTime</pre></code>
+                            </td>
+                            <td>
+                                <p>Kết thúc trò chơi (0: Đội có điểm cao nhất, 1: Chiến thắng khi hết giờ, 2: Thua
+                                    khi hết giờ)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>23</p>
+                            </td>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>GameRule.SaveMode</pre></code>
+                            </td>
+                            <td>
+                                <p>Lưu game (0: Có, 1: Không)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>24</p>
+                            </td>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>GameRule.KillNotify</pre></code>
+                            </td>
+                            <td>
+                                <p>Thông báo hạ gục (0: không, 1: có)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>25</p>
+                            </td>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>GameRule.BgMusicMode</pre></code>
+                            </td>
+                            <td>
+                                <p>Nhạc nền (-1: Không nhạc, 0: Mặc định, 1-8: Nhạc tương ứng)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>26</p>
+                            </td>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>GameRule.MobGen</pre></code>
+                            </td>
+                            <td>
+                                <p>Tạo sinh vật (-1: Chỉ tạo khi trò chơi được bắt đầu , 0: Không tạo sinh vật, 1: Tạo sinh
+                                    vật)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>27</p>
+                            </td>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>GameRule.SpawnPtMode</pre></code>
+                            </td>
+                            <td>
+                                <p>Điểm hồi sinh đội (0: điểm hồi sinh đội ngẫu nhiên, 1: điểm hồi sinh đội gần nhất)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>28</p>
+                            </td>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>GameRule.MinimapTeams</pre></code>
+                            </td>
+                            <td>
+                                <p>Hiển thị vị trí trên bản đồ (0: Hiển thị với đội khác, 1: không hiển thị
+                                    với đội khác)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>29</p>
+                            </td>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>GameRule.PlayerDieDrops</pre></code>
+                            </td>
+                            <td>
+                                <p>Mất vật phẩm khi bị tiêu diệt (0: rớt bình thường, 1: xóa vật phẩm trong
+                                    túi, 2: giữ vật phẩm, 3: rớt toàn bộ)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>30</p>
+                            </td>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>GameRule.DisplayScore</pre></code>
+                            </td>
+                            <td>
+                                <p>Hiển thị điểm và thời gian (0: Không, 1: Có)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>31</p>
+                            </td>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>GameRule.LifeNum</pre></code>
+                            </td>
+                            <td>
+                                <p>Số mạng (0: Không giới hạn, 1 → 99: 1 → 99 mạng)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>32</p>
+                            </td>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>GameRule.ShowSight</pre></code>
+                            </td>
+                            <td>
+                                <p>Hiển thị tâmm chuẩn (0: Không, 1: Có)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>33</p>
+                            </td>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>GameRule.ScoreColorChange</pre></code>
+                            </td>
+                            <td>
+                                <p>Số điểm nhận được khi nhuộm màu</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>34</p>
+                            </td>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>GameRule.GPoisonSwitch</pre></code>
+                            </td>
+                            <td>
+                                <p>Có bật khu ô nhiễm (0: không, 1: có)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>35</p>
+                            </td>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>GameRule.GPoisonSafeD0</pre></code>
+                            </td>
+                            <td>
+                                <p>Bán kính khu an toàn ban đầu (từ 1 tới 99 khối)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>36</p>
+                            </td>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>GameRule.GPoisonSafeT0</pre></code>
+                            </td>
+                            <td>
+                                <p>Thời gian khu an toàn ban đầu (từ 1 tới 600 giâmy)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>37</p>
+                            </td>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>GameRule.AllowMidwayJoin</pre></code>
+                            </td>
+                            <td>
+                                <p>Cho phép vào giữa trận (0: không, 1: có)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>38</p>
+                            </td>
+                            <td>
+                                <div class="code-block" style="width:300px;">
+                                    <pre><code>GameRule.LifeNumTeamShare</pre></code>
+                            </td>
+                            <td>
+                                <p>Chia sẻ mạng cùng đội (0: không, 1: có)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>39</p>
+                            </td>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>GameRule.ViewMode</pre></code>
+                            </td>
+                            <td>
+                                <p>Bật chế độ theo dõi (0: không, 1: có)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>40</p>
+                            </td>
+                            <td>
+                                <p>
+                                <div class="code-block">
+                                    <pre><code>GameRule.ViewType</pre></code>
+                            </td>
+                            <td>
+                                <p>Chế độ theo dõi (0: tự do, 1: theo màn hình, 2: có thể thay đổi)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>41</p>
+                            </td>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>GameRule.CountDown</pre></code>
+                            </td>
+                            <td>
+                                <p>Đếm ngược bắt đầu trò chơi (từ 1 tới 100 giâmy)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>42</p>
+                            </td>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>GameRule.ScoreResetRound</pre></code>
+                            </td>
+                            <td>
+                                <p>Khởi động lại dữ liệu mỗi hiệp (0: không, 1: có)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>43</p>
+                            </td>
+                            <td>
+                                <div class="code-block">
+                                    <pre><code>GameRule.ResetScore</pre></code>
+                            </td>
+                            <td>
+                                <p>Khởi động lại dữ liệu khi đạt từ 1 tới 100 điểm</p>
                             </td>
                         </tr>
                     </tbody>
