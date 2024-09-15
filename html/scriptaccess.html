@@ -1,58 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chỉnh Sửa Script</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="keyword" content="miniworld,MiniWorld,MW,mw,mwwiki,MWWIKI,mwapi,MWAPI,MWAPIWIKI">
+    <title>Thế Giới</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="container">
-        <nav class="sidebar">
-            <div class="sidebar-header">
-                <button class="toggle-btn">☰</button>
-                <h2 class="menu-title">Menu</h2>
-            </div>
-            <h3 class="sidebar-header">Hướng Dẫn Cơ Bản</h3>
-            <ul class="sidebar-list">
-                <li><a href="scriptaccess.html">Cách Truy Cập Script</a></li>
-                <li><a href="editscript.html">Cách Chỉnh Sửa Kịch Bản</a></li>
-            </ul>
-            <h3 class="sidebar-header">Giới Thiệu</h3>
-            <ul class="sidebar-list">
-                <li><a href="lua.html">LUA Là Gì</a></li>
-                <li><a href="caseandexplain.html">Những Ví Dụ Cơ Bản Và Giải Thích</a></li>
-            </ul>
-        </nav>
-        <div class="content">
-            <section id="home">
-                <h2 class="guide-title">Cách để truy cập vào Script</h2>
-                <div class="guide-steps">
-                    <div class="guide-step">
-                        <h4>Bước 1: Nhấp vào nút "Luật"</h4>
-                        <img src="picture/huongdan.png" alt="Bước 1" width="80%" height="auto">
-                    </div>
-                    <div class="guide-step">
-                        <h4>Bước 2: Nhấp vào nút "Kịch Bản"</h4>
-                        <img src="picture/huongdan2.png" alt="Bước 2" width="80%" height="auto">
-                    </div>
-                    <div class="guide-step">
-                        <h4>Bước 3: Nhấp vào nút "Kịch Bản Mới"</h4>
-                        <img src="picture/huongdan3.png" alt="Bước 3" width="80%" height="auto">
-                    </div>
-                    <div class="guide-step">
-                        <h4>Bước 4: Xóa Script hiện tại bằng việc bấm vào nút</h4>
-                        <img src="picture/huongdan5.png" alt="Bước 4" width="10%" height="auto">
-                    </div>
-                    <div class="guide-step">
-                        <h4>Hoàn thành</h4>
-                        <img src="picture/huongdan4.png" alt="Hoàn thành" width="80%" height="auto">
-                    </div>
-                </div>
+    <div class="sidebar close">
+        <div class="home-content">
+            <i class="fas fa-bars"></i>
+            <span class="menu-text">Menu</span>
         </div>
+        <ul class="nav-list">
+            <li>
+                <ul class="sub-menu">
+                    <li><a class="link-name">Hướng Dẫn Cơ Bản</a></li>
+                    <li><a href="/html/scriptaccess.html">Cách Truy Cập Script</a></li>
+                    <li><a href="/html/editscript.html">Cách Chỉnh Sửa Kịch Bản</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <div class="icon-link">
+                    <a>
+                        <i class="fa-solid fa-book"></i>
+                        <span class="link-name">Hướng Dẫn Cơ Bản</span>
+                    </a>
+                    <i class="fas fa-caret-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                    <li><a class="link-name">Hướng Dẫn Cơ Bản</a></li>
+                    <li><a href="/html/scriptaccess.html">Cách Truy Cập Script</a></li>
+                    <li><a href="/html/editscript.html">Cách Chỉnh Sửa Kịch Bản</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <div class="icon-link">
+                    <a>
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span class="link-name">Giới Thiệu</span>
+                    </a>
+                    <i class="fas fa-caret-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                    <li><a class="link-name">Giới Thiệu</a></li>
+                    <li><a href="/html/lua.html">LUA Là Gì</a></li>
+                    <li><a href="/html/caseandexplain.html">Ví Dụ Cơ Bản Và Giải Thích</a></li>
+                    <li><a href="/html/luacase.html">Ví Dụ Về Các Chức Năng Của LUA</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <div class="icon-link">
+                    <a>
+                        <i class="fa-solid fa-scroll"></i>
+                        <span class="link-name">Script</span>
+                    </a>
+                    <i class="fas fa-caret-down arrow"></i>
+                </div>
+
+                <ul class="sub-menu">
+                    <li><a href="/html/#" class="link-name">Script</a></li>
+                    <li><a href="/html/event.html">Sự Kiện</a></li>
+                    <li><a href="/html/gamerule.html">Quy Luật Thế Giới</a></li>
+                    <li><a href="/html/world.html">Quản Lí Thế Giới</a></li>
+                    <li><a href="/html/game.html">Quản Lí Trò Chơi</a></li>
+                    <li><a href="/html/block.html">Quản Lí Khối</a></li>
+                    <li><a href="/html/buff.html">Quản Lí Trạng Thái</a></li>
+                    <li><a href="/html/actor.html">Quản Lí Thực Thể/Actor Management Interface(Cần Góp Ý Dịch)</a></li>
+                    <li><a href="/html/player.html">Quản Lí Người Chơi</a></li>
+                    <li><a href="/html/creature.html">Quản Lí Sinh Vật</a></li>
+                    <li><a href="/html/ui.html">Quản Lí Giao Diện UI</a></li>
+                    <li><a href="/html/area.html">Quản Lí Khu Vực</a></li>
+                    <li><a href="/html/chat.html">Quản Lí Chat</a></li>
+                    <li><a href="/html/team.html">Quản Lí Đội</a></li>
+                    <li><a href="/html/item.html">Quản Lí Vật Phẩm</a></li>
+                    <li><a href="/html/backpack.html">Quản Lí Túi Đồ</a></li>
+                    <li><a href="/html/objectlib.html">Quản Lí Đối Tượng</a></li>
+                    <li><a href="/html/varlib2.html">Quản Lí Biến</a></li>
+                    <li><a href="/html/worldcontainer.html">Quản Lí Vật Chứa/Container Management Interface(Cần Góp Ý
+                            Dịch)</a></li>
+                    <li><a href="/html/mapmark.html">Quản Lí Đánh Dấu Thế Giới/Minimap Management Interface(Cần Góp Ý
+                            Dịch)(Không Hoạt Động)</a></li>
+                    <li><a href="/html/spawnport.html">Quản Lí Điểm Hồi Sinh</a></li>
+                    <li><a href="/html/timer.html">Quản Lí Bộ Đếm Giờ</a></li>
+                    <li><a href="/html/graphic.html">Quản Lí Đồ Họa/Graphics and text information management interface(Không
+                            Hoạt Động)</a></li>
+                    <li><a href="/html/listenparam.html">Function monitoring managementinterface</a></li>
+                    <li><a href="/html/valuegroup.html">Quản Lí Nhóm Biến</a></li>
+                    <li><a href="/html/costomui.html">Quản Lí UI</a></li>
+                    <li><a href="/html/displayboard.html">Quản Lí Bảng Hiện Thị</a></li>
+                    <li><a href="/html/cloudsever.html">Quản Lí Máy Chủ Đám Mây</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <section id="home">
+            <h2 class="guide-title">Cách để truy cập vào Script</h2>
+            <div class="guide-steps">
+                <div class="guide-step">
+                    <h4>Bước 1: Nhấp vào nút "Luật"</h4>
+                    <img src="/picture/huongdan.png" alt="Bước 1" width="80%" height="auto">
+                </div>
+                <div class="guide-step">
+                    <h4>Bước 2: Nhấp vào nút "Kịch Bản"</h4>
+                    <img src="/picture/huongdan2.png" alt="Bước 2" width="80%" height="auto">
+                </div>
+                <div class="guide-step">
+                    <h4>Bước 3: Nhấp vào nút "Kịch Bản Mới"</h4>
+                    <img src="/picture/huongdan3.png" alt="Bước 3" width="80%" height="auto">
+                </div>
+                <div class="guide-step">
+                    <h4>Bước 4: Xóa Script hiện tại bằng việc bấm vào nút</h4>
+                    <img src="/picture/huongdan5.png" alt="Bước 4" width="10%" height="auto">
+                </div>
+                <div class="guide-step">
+                    <h4>Hoàn thành</h4>
+                    <img src="/picture/huongdan4.png" alt="Hoàn thành" width="80%" height="auto">
+                </div>
+            </div>
     </div>
 </body>
-<script src="sidebar.js"></script>
+<script src="/js/sidebar.js"></script>
 
 </html>
