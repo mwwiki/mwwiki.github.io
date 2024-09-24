@@ -1,5 +1,5 @@
 ## Read The Wiki
-### For Further Please Send A Mail At anhkhoale05052010@gmail.com
+### For Further Please Send A Mail At mwwiki@outlook.com.vn
 ### All Website That I Used
  + [开发者脚本帮助文档](https://developers.mini1.cn/wiki/)
  + [WIKI - Mini World: CREATA VN](https://wiki.miniworldgame.vn/doku.php?id=developer_center:developer_editor:script)
