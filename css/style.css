@@ -431,3 +431,6 @@ transform: translateY(-50%);
 .sidebar .menu-text{
   display:initial;
 }
+.sub-menu{
+  background-color: rgb(54, 54, 56);
+}

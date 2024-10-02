@@ -1,10 +1,11 @@
-<!dOcTYPe html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="\css\style.css">
+    <link rel="stylesheet" href="\css\ace.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -37,10 +38,9 @@
 <span class="api">Block:placeBlock</span><span class="api">(</span><span class="value">105</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">7</span><span class="api">, FACE_DIRECTION.DIR_POS_Y</span><span class="api">)</span>
 
 <span class="comment">-- Giải Thích Sơ Lược</span>
-<span class="comment">-- Block:placeBlock(ID Khối ,Tọa Độ X, Tọa Độ Y, Tọa Độ Z, Hướng Đặt Khối) Đặt Khối có ID Tại Điểm có Tọa Độ X,Y,Z
-</span>
+<class class="comment">-- Block:placeBlock(ID Khối ,Tọa Độ X, Tọa Độ Y, Tọa Độ Z, Hướng Đặt Khối) Đặt Khối có ID Tại Điểm có Tọa Độ X,Y,Z</class>
 </code></pre>
-                      </div>
+                        </div>
                 <p>Giải Thích</p>
                 <ul>
                     <li>Để đặt một khối chúng ta cần ID của khối đó. Để lấy ID của khối chúng ta vào <a href="blockid.html">ID Khối</a></li>
@@ -56,14 +56,12 @@
                     <li>Sau khi đã xác định 5 tham số thì dùng <h7>Block:placeBlock</h7> để đặt khối ở 3 vị trí.</li>
                 </ul>
                 <h9>Hoặc</h9>
-                <div class="code-block">
-                    <pre><code><span class="keyword">local</span><span class="variable"> blockID </span><span class="api">= </span><span class="value">105</span><span class="comment">    -- Khai Báo Biến blockID Và Đặt Biến blockID Thành 105</span>
-<span class="keyword">local</span><span class="variable"> blockFace </span><span class="api">= </span><span class="api">FACE_DIRECTION.DIR_POS_Y</span><span class="comment">    -- Tương Tự Định Nghĩa Biến blockFace Và Đặt Biến Thành FACE_DIRECTION.DIR_POS_Y</span>
-<span class="api">Block:placeBlock</span><span class="api">(</span><span class="api">blockID</span><span class="api">,</span> <span class="value">3</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">3</span><span class="api">, blockFace</span><span class="api">)</span>
-<span class="api">Block:placeBlock</span><span class="api">(</span><span class="api">blockID</span><span class="api">,</span> <span class="value">5</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">5</span><span class="api">, blockFace</span><span class="api">)</span>
-<span class="api">Block:placeBlock</span><span class="api">(</span><span class="api">blockID</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">7</span><span class="api">,</span> <span class="value">7</span><span class="api">, blockFace</span><span class="api">)</span>
-</code></pre>
-                </div>
+                <div class="code-block"><pre><code><span class="ace_identifier">Block</span><span class="ace_keyword ace_operator">:</span><span class="ace_identifier">placeBlock</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">105</span>, <span class="ace_constant ace_numeric">3</span>, <span class="ace_constant ace_numeric">7</span>, <span class="ace_constant ace_numeric">3</span>, <span class="ace_identifier">FACE_DIRECTION</span>.<span class="ace_identifier">DIR_POS_Y</span><span class="ace_paren ace_rparen">)</span>
+<span class="ace_identifier">Block</span><span class="ace_keyword ace_operator">:</span><span class="ace_identifier">placeBlock</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">105</span>, <span class="ace_constant ace_numeric">5</span>, <span class="ace_constant ace_numeric">7</span>, <span class="ace_constant ace_numeric">5</span>, <span class="ace_identifier">FACE_DIRECTION</span>.<span class="ace_identifier">DIR_POS_Y</span><span class="ace_paren ace_rparen">)</span>
+<span class="ace_identifier">Block</span><span class="ace_keyword ace_operator">:</span><span class="ace_identifier">placeBlock</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">105</span>, <span class="ace_constant ace_numeric">7</span>, <span class="ace_constant ace_numeric">7</span>, <span class="ace_constant ace_numeric">7</span>, <span class="ace_identifier">FACE_DIRECTION</span>.<span class="ace_identifier">DIR_POS_Y</span><span class="ace_paren ace_rparen">)</span>
+<span class="ace_comment">-- Giải Thích Sơ Lược</span>
+<span class="ace_comment">-- Block:placeBlock(ID Khối ,Tọa Độ X, Tọa Độ Y, Tọa Độ Z, Hướng Đặt Khối) Đặt Khối có ID Tại Điểm có Tọa Độ X,Y,Z</span>
+</code></pre></div>
             <p>Giải Thích</p>
             <ul>
                 <li>3 khối được đặt là giống nhau nên chúng ta có thể sử dụng 1 biến thay vì nhập ID khối nhiều lần.</li>
@@ -111,6 +109,6 @@ Sinh Vật Tại Vị Trí Có Tọa Độ X, Y ,Z</span>
         </div>
     </div>
     <script src="sidebar.js"></script>
-    <script src="copy.js"></script>
+    <script src="/js/copy.js"></script>
 </body>
 </html>
