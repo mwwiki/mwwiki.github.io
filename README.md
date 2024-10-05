@@ -1,5 +1,3 @@
-## Read The Wiki
-
 ### For Further Please Send A Mail At anhkhoale05052010@gmail.com
 
 ### All Website That I Used
